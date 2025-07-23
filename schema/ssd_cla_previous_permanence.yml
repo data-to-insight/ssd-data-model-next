@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_cla_previous_permanence
   fields:
@@ -133,3 +132,15 @@ nodes:
     - mosaic:ssd_cla_previous_permanence
     guidance: The name of the local authority who arranged the previous permanence
       option.
+  categories:
+  - looked_after
+  - care_plan
+  - placement
+  - immunisations
+  - convictions
+  - substance_misuse
+  - health
+  - visits
+  - reviews
+  - episodes
+  _inferred: true

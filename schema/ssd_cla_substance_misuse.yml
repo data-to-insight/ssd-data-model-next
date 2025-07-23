@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_cla_substance_misuse
   fields:
@@ -104,3 +103,15 @@ nodes:
     - liquid_logic:ssd_cla_substance_misuse
     - mosaic:ssd_cla_substance_misuse
     guidance: Did child receive intervention for substance misuse problem?
+  categories:
+  - looked_after
+  - care_plan
+  - placement
+  - immunisations
+  - convictions
+  - substance_misuse
+  - health
+  - visits
+  - reviews
+  - episodes
+  _inferred: true

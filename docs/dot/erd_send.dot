@@ -1,0 +1,15 @@
+digraph G {
+  node [shape=record];
+  ssd_ehcp_requests [label="{ssd_ehcp_requests|ehcr_ehcp_request_id PK\lehcr_send_table_id → ssd_send.send_table_id\lehcr_ehcp_req_date\lehcr_ehcp_req_outcome_date\lehcr_ehcp_req_outcome\l}"];
+  ssd_ehcp_assessment [label="{ssd_ehcp_assessment|ehca_ehcp_assessment_id PK\lehca_ehcp_request_id → ssd_ehcp_requests.ehcr_ehcp_request_id\lehca_ehcp_assessment_outcome_date\lehca_ehcp_assessment_outcome\lehca_ehcp_assessment_exceptions\l}"];
+  ssd_send [label="{ssd_send|send_table_id PK\lsend_upn\lsend_uln\lsend_upn_unknown\lsend_person_id → ssd_person.pers_person_id\l}"];
+  ssd_sen_need [label="{ssd_sen_need|senn_table_id PK\lsenn_active_ehcp_id → ssd_ehcp_active_plans.ehcp_active_ehcp_id\lsenn_active_ehcp_need_type\lsenn_active_ehcp_need_rank\l}"];
+  ssd_ehcp_named_plan [label="{ssd_ehcp_named_plan|ehcn_named_plan_id PK\lehcn_ehcp_asmt_id → ssd_ehcp_assessment.ehca_ehcp_asmt_id\lehcn_named_plan_start_date\lehcn_named_plan_ceased_date\lehcn_named_plan_ceased_reason\l}"];
+  ssd_ehcp_active_plans [label="{ssd_ehcp_active_plans|ehcp_active_ehcp_id PK\lehcp_ehcp_request_id → ssd_ehcp_requests.ehcr_ehcp_request_id\lehcp_active_ehcp_last_review_date\l}"];
+  ssd_ehcp_requests -> ssd_send [label="ehcr_send_table_id"];
+  ssd_ehcp_assessment -> ssd_ehcp_requests [label="ehca_ehcp_request_id"];
+  ssd_send -> ssd_person [label="send_person_id"];
+  ssd_sen_need -> ssd_ehcp_active_plans [label="senn_active_ehcp_id"];
+  ssd_ehcp_named_plan -> ssd_ehcp_assessment [label="ehcn_ehcp_asmt_id"];
+  ssd_ehcp_active_plans -> ssd_ehcp_requests [label="ehcp_ehcp_request_id"];
+}

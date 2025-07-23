@@ -10,17 +10,25 @@ CATEGORY_SCOPE = "field"  # Options: "node", "field", or "both"
 
 SCHEMA_PATH = Path("schema")
 IMAGE_DIR = Path("docs/assets/images")
-DOT_DIR = Path("scripts/tmp_dot")
+DOT_DIR = Path("docs/dot")
 DOT_DIR.mkdir(parents=True, exist_ok=True)
 IMAGE_DIR.mkdir(parents=True, exist_ok=True)
 
 # Expanded domain mapping
 DOMAIN_MAP = {
-    "cla": ["looked_after", "care_plan", "placement", "immunisations", "convictions", "substance_misuse", "health", "visits", "reviews", "episodes"],
-    "cin": ["child_in_need", "assessment", "plan", "referral", "visit", "factors"],
-    "cp": ["child_protection", "conference", "plan", "review", "visit", "pre_proceedings"]
+    "cla": ["looked_after", "care_plan", "placement", "substance_misuse", "visits", "reviews", "episodes"],
+    "cin": ["child_in_need", "assessment", "plan", "referral", "visit", "factors", "need", "contact"],
+    "cp": ["child_protection", "conference", "cp_plan", "review", "visit", "pre_proceedings","s47_enquiry", "initial_cp_conference"],
+    "identity": ["identity", "address", "linked_identifiers",  "immigration", "mother", "convictions", "sdq", "voice_of_child"],
+    "health": ["health", "disability", "immunisations"],
+    "ehcp": ["ehcp", "ehcp_request", "ehcp_assessment"],
+    "send": ["send"],
+    "early_help": ["early_help", "family"],
+    "care_leavers": ["care_leavers", "adoption", "permanence"],
+    "finance": ["finance"],
+    "workforce": ["workforce"],
+    "ssd_admin": ["admin"]
 }
-
 def normalise_tags(raw_tags):
     return [t.strip().lower().replace("-", "_") for t in raw_tags]
 

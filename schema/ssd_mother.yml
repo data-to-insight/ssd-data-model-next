@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_mother
   fields:
@@ -99,3 +98,15 @@ nodes:
     guidance: The SSD will include all children for each mother. This information
       is only currently collected in the SSDA903 (CLA) return where the DOB of the
       mother's first child is required.
+  categories:
+  - looked_after
+  - care_plan
+  - placement
+  - immunisations
+  - convictions
+  - substance_misuse
+  - health
+  - visits
+  - reviews
+  - episodes
+  _inferred: true

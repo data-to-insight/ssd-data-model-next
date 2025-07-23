@@ -1,0 +1,5 @@
+digraph G {
+  node [shape=record];
+  ssd_s251_finance [label="{ssd_s251_finance|s251_table_id PK\ls251_cla_placement_id → ssd_cla_placement.clap_cla_placement_id\ls251_placeholder_1\ls251_placeholder_2\ls251_placeholder_3\ls251_placeholder_4\l}"];
+  ssd_s251_finance -> ssd_cla_placement [label="s251_cla_placement_id"];
+}

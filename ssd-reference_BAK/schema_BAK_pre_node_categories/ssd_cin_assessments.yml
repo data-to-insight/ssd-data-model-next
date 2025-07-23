@@ -1,0 +1,237 @@
+---
+nodes:
+- name: ssd_cin_assessments
+  fields:
+  - name: cina_assessment_id
+    description: Assessment ID
+    item_ref: CINA001A
+    type: nvarchar
+    primary_key: true
+    validators:
+    - required:
+        enabled: true
+    - unique:
+        enabled: true
+    categories:
+    - child_in_need
+    - assessment
+    returns:
+    - CIN
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:cina_assessment_id
+    - mosaic:cina_assessment_id
+    cms_table:
+    - liquid_logic:ssd_cin_assessments
+    - mosaic:ssd_cin_assessments
+    guidance: Row identifier for the ssd_cin_assessments table.
+  - name: cina_person_id
+    description: Person Unique ID
+    item_ref: CINA002A
+    type: nvarchar
+    foreign_key: ssd_person.pers_person_id
+    validators:
+    - required:
+        enabled: true
+    categories:
+    - child_in_need
+    - assessment
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - eclipse
+    - caredirector
+    - azeus
+    cms_field:
+    - liquid_logic:cina_person_id
+    - mosaic:cina_person_id
+    cms_table:
+    - liquid_logic:ssd_cin_assessments
+    - mosaic:ssd_cin_assessments
+    guidance: Person's ID generated in CMS Database
+  - name: cina_referral_id
+    description: Referral ID
+    item_ref: CINA010A
+    type: nvarchar
+    foreign_key: ssd_cin_episodes.cine_referral_id
+    categories:
+    - child_in_need
+    - assessment
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:cina_referral_id
+    - mosaic:cina_referral_id
+    cms_table:
+    - liquid_logic:ssd_cin_assessments
+    - mosaic:ssd_cin_assessments
+    guidance: ID for linking to CIN Referral Episode
+  - name: cina_assessment_start_date
+    description: Assessment Start Date
+    item_ref: CINA003A
+    type: datetime
+    categories:
+    - child_in_need
+    - assessment
+    returns:
+    - CIN
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:cina_assessment_start_date
+    - mosaic:cina_assessment_start_date
+    cms_table:
+    - liquid_logic:ssd_cin_assessments
+    - mosaic:ssd_cin_assessments
+    guidance: This is the actual start date of the continuous assessment.
+  - name: cina_assessment_child_seen
+    description: Child Seen During Assessment
+    item_ref: CINA004A
+    type: nchar
+    categories:
+    - child_in_need
+    - assessment
+    returns:
+    - AnnexA
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:cina_assessment_child_seen
+    - mosaic:cina_assessment_child_seen
+    cms_table:
+    - liquid_logic:ssd_cin_assessments
+    - mosaic:ssd_cin_assessments
+    guidance: Was the child seen during the Assessment process?
+  - name: cina_assessment_auth_date
+    description: Assessment Authorised Date
+    item_ref: CINA005A
+    type: datetime
+    categories:
+    - child_in_need
+    - assessment
+    returns:
+    - CIN
+    - RIIA
+    - AnnexA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:cina_assessment_auth_date
+    - mosaic:cina_assessment_auth_date
+    cms_table:
+    - liquid_logic:ssd_cin_assessments
+    - mosaic:ssd_cin_assessments
+    guidance: "This is the date the assessment is completed and authorised.\nAn assessment\
+      \ is deemed to be completed once the social worker has informed, in writing,\
+      \ all the relevant agencies and the family of their decisions and if the child\
+      \ is a child in need, of the plan for providing support/ or once the assessment\
+      \ has been discussed with the child\u2019s family (or carers) and the team manager\
+      \ has viewed and authorised the assessment."
+  - name: cina_assessment_outcome_json
+    description: Assessment Outcome
+    item_ref: CINA006A
+    type: nvarchar
+    categories:
+    - child_in_need
+    - assessment
+    returns:
+    - AnnexA
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:cina_assessment_outcome_json
+    - mosaic:cina_assessment_outcome_json
+    cms_table:
+    - liquid_logic:ssd_cin_assessments
+    - mosaic:ssd_cin_assessments
+    guidance: 'Outcome of the single assessment. Combined dictionary/ json type containing
+      the following AS cina_assessment_outcome_json
+
+      ---------------------------------------
+
+      -- SSD standard - all keys in structure regardless of data presence
+
+      { NFA_FLAG: "", NFA_S47_END_FLAG: "", STRATEGY_DISCUSSION_FLAG: "", CLA_REQUEST_FLAG:
+      "", PRIVATE_FOSTERING_FLAG: "", LEGAL_ACTION_FLAG: "", PROV_OF_SERVICES_FLAG:
+      "", PROV_OF_SB_CARE_FLAG: "", SPECIALIST_ASSESSMENT_FLAG: "", REFERRAL_TO_OTHER_AGENCY_FLAG:
+      "", OTHER_ACTIONS_FLAG: "", OTHER_OUTCOMES_EXIST_FLAG: "", TOTAL_NO_OF_OUTCOMES:
+      , COMMENTS: "" }'
+  - name: cina_assessment_outcome_nfa
+    description: Assessment NFA
+    item_ref: CINA009A
+    type: NCHAR
+    categories:
+    - child_in_need
+    - assessment
+    returns:
+    - CIN
+    - RIIA
+    - AnnexA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:cina_assessment_outcome_nfa
+    - mosaic:cina_assessment_outcome_nfa
+    cms_table:
+    - liquid_logic:ssd_cin_assessments
+    - mosaic:ssd_cin_assessments
+    guidance: Standalone field showing whether or not the Assessment resulted in No
+      Further Action.
+  - name: cina_assessment_team
+    description: Assessment Completed by Team
+    item_ref: CINA007A
+    type: nvarchar
+    foreign_key: ssd_department.dept_team_id
+    categories:
+    - child_in_need
+    - assessment
+    returns:
+    - AnnexA
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:cina_assessment_team_name
+    - mosaic:cina_assessment_team_name
+    cms_table:
+    - liquid_logic:ssd_cin_assessments
+    - mosaic:ssd_cin_assessments
+    guidance: Team responsible for completing the Assessment
+  - name: cina_assessment_worker_id
+    description: Assessment Completed by Worker name
+    item_ref: CINA008A
+    type: nvarchar
+    foreign_key: ssd_professionals.prof_professional_id
+    categories:
+    - child_in_need
+    - assessment
+    returns:
+    - AnnexA
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:cina_assessment_worker_name
+    - mosaic:cina_assessment_worker_name
+    cms_table:
+    - liquid_logic:ssd_cin_assessments
+    - mosaic:ssd_cin_assessments
+    guidance: Worker responsible for completing the Assessment

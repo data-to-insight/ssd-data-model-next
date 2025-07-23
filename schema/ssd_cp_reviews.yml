@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_cp_reviews
   fields:
@@ -214,3 +213,11 @@ nodes:
       viewpoint)
 
       PN7 - Child does not attend nor are his or her views conveyed to the review'
+  categories:
+  - child_protection
+  - conference
+  - plan
+  - review
+  - visit
+  - pre_proceedings
+  _inferred: true

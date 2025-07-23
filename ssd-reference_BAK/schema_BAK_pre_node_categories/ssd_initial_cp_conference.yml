@@ -1,0 +1,255 @@
+---
+nodes:
+- name: ssd_initial_cp_conference
+  fields:
+  - name: icpc_icpc_id
+    description: Initial CP Conference ID
+    item_ref: ICPC001A
+    type: nvarchar
+    primary_key: true
+    categories:
+    - initial_cp_conference
+    - child_protection
+    returns:
+    - Local
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: Row identifier for the ssd_initial_cp_conference table
+  - name: icpc_icpc_meeting_id
+    description: Initial CP Conference Meeting ID
+    item_ref: ICPC009A
+    type: nvarchar
+    returns:
+    - Local
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: Identifier for the Initial CP Conference Meeting
+  - name: icpc_s47_enquiry_id
+    description: S47 Enquiry ID
+    item_ref: ICPC002A
+    type: nvarchar
+    foreign_key: ssd_s47_enquiry.s47e_s47_enquiry_id
+    returns:
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: ID for linking to Section 47 Enquiry
+  - name: icpc_person_id
+    description: Person Unique ID
+    item_ref: ICPC010A
+    type: nvarchar
+    foreign_key: ssd_person.pers_person_id
+    validators:
+    - required:
+        enabled: true
+    categories:
+    - s47_enquiry
+    - child_protection
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - eclipse
+    - caredirector
+    - azeus
+    cms_field:
+    - liquid_logic:icpc_person_id
+    - mosaic:icpc_person_id
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: Person's ID generated in CMS Database
+  - name: icpc_cp_plan_id
+    description: CP Plan ID
+    item_ref: ICPC011A
+    type: nvarchar
+    validators:
+    - required:
+        enabled: true
+    - unique:
+        enabled: true
+    categories:
+    - child_protection
+    - cp_plan
+    returns:
+    - RIIA
+    - AnnexA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:CPPL_cp_plan_id
+    - mosaic:CPPL_cp_plan_id
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: CP Plan ID for ICPC's resulting in a CP Plan
+  - name: icpc_referral_id
+    description: Referral ID
+    item_ref: ICPC012A
+    type: nvarchar
+    foreign_key: ssd_cin_episodes.cine_referral_id
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:icpc_referral_id
+    - mosaic:icpc_referral_id
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: ID for linking to CIN Referral Episode
+  - name: icpc_icpc_transfer_in
+    description: Is this a transferred in ICPC?
+    item_ref: ICPC003A
+    type: nchar
+    categories:
+    - initial_cp_conference
+    - child_protection
+    returns:
+    - RIIA
+    - AnnexA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:icpc_icpc_transfer_in
+    - mosaic:icpc_icpc_transfer_in
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: Is this is a transfer in ICPC? Y/N
+  - name: icpc_icpc_target_date
+    description: Target ICPC date
+    item_ref: ICPC004A
+    type: datetime
+    categories:
+    - initial_cp_conference
+    - child_protection
+    returns:
+    - CIN
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:icpc_icpc_target_date
+    - mosaic:icpc_icpc_target_date
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: The date that is 15 working days after the strategy discussion at which
+      section 47 enquiries were initiated.
+  - name: icpc_icpc_date
+    description: Date of Initial CP Conference
+    item_ref: ICPC005A
+    type: datetime
+    categories:
+    - initial_cp_conference
+    - child_protection
+    returns:
+    - CIN
+    - RIIA
+    - AnnexA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:icpc_icpc_date
+    - mosaic:icpc_icpc_date
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: The date on which the initial child protection conference took place.
+  - name: icpc_icpc_outcome_cp_flag
+    description: ICPC Outcome CP Flag
+    item_ref: ICPC013A
+    type: nchar
+    returns:
+    - AnnexA
+    cms_field:
+    - liquid_logic:icpc_icpc_outcome_cp_flag
+    - mosaic:icpc_icpc_outcome_cp_flag
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: Standalone field showing whether or not the ICPC resulted in a CP Plan
+  - name: icpc_icpc_outcome_json
+    description: Outcome of Initial CP Conference
+    item_ref: ICPC006A
+    type: nvarchar
+    categories:
+    - initial_cp_conference
+    - child_protection
+    returns:
+    - AnnexA
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:icpc_icpc_outcome_json
+    - mosaic:icpc_icpc_outcome_json
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: 'Outcome of the Initial CP Conference. Combined dictionary/ json type
+      containing the following, AS icpc_icpc_outcome_json
+
+      ---------------------------------------
+
+      -- SSD standard - all keys in structure regardless of data presence
+
+      { NFA_FLAG: "", REFERRAL_TO_OTHER_AGENCY_FLAG: "", SINGLE_ASSESSMENT_FLAG: "",
+      PROV_OF_SERVICES_FLAG: "", CP_FLAG: "", OTHER_OUTCOMES_EXIST_FLAG: "", TOTAL_NO_OF_OUTCOMES:
+      , COMMENTS: "" }'
+  - name: icpc_icpc_team
+    description: ICPC Completed by Team
+    item_ref: ICPC007A
+    type: nvarchar
+    foreign_key: ssd_department.dept_team_id
+    categories:
+    - initial_cp_conference
+    - child_protection
+    returns:
+    - AnnexA
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:icpc_icpc_team_name
+    - mosaic:icpc_icpc_team_name
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: Team responsible for organising ICPC
+  - name: icpc_icpc_worker_id
+    description: ICPC Completed by Worker
+    item_ref: ICPC008A
+    type: nvarchar
+    foreign_key: ssd_professionals.prof_professional_id
+    categories:
+    - initial_cp_conference
+    - child_protection
+    returns:
+    - AnnexA
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:icpc_icpc_worker_name
+    - mosaic:icpc_icpc_worker_name
+    cms_table:
+    - liquid_logic:ssd_initial_cp_conference
+    - mosaic:ssd_initial_cp_conference
+    guidance: Worker who organised the ICPC

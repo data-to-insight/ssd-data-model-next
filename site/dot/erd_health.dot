@@ -1,0 +1,11 @@
+digraph G {
+  node [shape=record];
+  ssd_cla_immunisations [label="{ssd_cla_immunisations|clai_person_id → ssd_cla_episodes.clae_person_id\lclai_immunisations_status\lclai_immunisations_status_date\l}"];
+  ssd_cla_health [label="{ssd_cla_health|clah_health_check_id PK\lclah_person_id → ssd_cla_episodes.clae_person_id\lclah_health_check_type\lclah_health_check_date\lclah_health_check_status\l}"];
+  ssd_cla_substance_misuse [label="{ssd_cla_substance_misuse|clas_substance_misuse_id PK\lclas_person_id → ssd_cla_episodes.clae_person_id\lclas_substance_misuse_date\lclas_substance_misused\lclas_intervention_received\l}"];
+  ssd_disability [label="{ssd_disability|disa_person_id → ssd_person.pers_person_id\ldisa_table_id PK\ldisa_disability_code\l}"];
+  ssd_cla_immunisations -> ssd_cla_episodes [label="clai_person_id"];
+  ssd_cla_health -> ssd_cla_episodes [label="clah_person_id"];
+  ssd_cla_substance_misuse -> ssd_cla_episodes [label="clas_person_id"];
+  ssd_disability -> ssd_person [label="disa_person_id"];
+}

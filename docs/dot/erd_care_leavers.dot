@@ -1,0 +1,12 @@
+digraph G {
+  node [shape=record];
+  ssd_permanence [label="{ssd_permanence|perm_table_id PK\lperm_person_id → ssd_cla_episodes.clae_cla_episode_id\lperm_cla_id\lperm_adm_decision_date\lperm_ffa_cp_decision_date\lperm_placement_order_date\lperm_placed_for_adoption_date\lperm_matched_date\lperm_adopted_by_carer_flag\lperm_placed_ffa_cp_date\lperm_decision_reversed_date\lperm_placed_foster_carer_date\lperm_part_of_sibling_group\lperm_siblings_placed_together\lperm_siblings_placed_apart\lperm_placement_provider_urn\lperm_decision_reversed_reason\lperm_permanence_order_date\lperm_permanence_order_type\lperm_adoption_worker_id → ssd_professionals.prof_professional_id\lperm_adopter_sex\lperm_adopter_legal_status\lperm_number_of_adopters\l}"];
+  ssd_cla_previous_permanence [label="{ssd_cla_previous_permanence|lapp_table_id PK\llapp_person_id → ssd_cla_episodes.clae_person_id\llapp_previous_permanence_order_date\llapp_previous_permanence_option\llapp_previous_permanence_la\l}"];
+  ssd_care_leavers [label="{ssd_care_leavers|clea_table_id PK\lclea_person_id → ssd_person.pers_person_id\lclea_care_leaver_eligibility\lclea_care_leaver_in_touch\lclea_care_leaver_latest_contact\lclea_care_leaver_accommodation\lclea_care_leaver_accom_suitable\lclea_care_leaver_activity\lclea_pathway_plan_review_date\lclea_care_leaver_personal_advisor\lclea_care_leaver_allocated_team → ssd_department.dept_team_id\lclea_care_leaver_worker_id → ssd_professionals.prof_professional_id\l}"];
+  ssd_permanence -> ssd_cla_episodes [label="perm_person_id"];
+  ssd_permanence -> ssd_professionals [label="perm_adoption_worker_id"];
+  ssd_cla_previous_permanence -> ssd_cla_episodes [label="lapp_person_id"];
+  ssd_care_leavers -> ssd_person [label="clea_person_id"];
+  ssd_care_leavers -> ssd_department [label="clea_care_leaver_allocated_team"];
+  ssd_care_leavers -> ssd_professionals [label="clea_care_leaver_worker_id"];
+}

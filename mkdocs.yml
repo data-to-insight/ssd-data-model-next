@@ -5,6 +5,15 @@ nav:
       - CLA: schema/erd_cla.md
       - CIN: schema/erd_cin.md
       - CP: schema/erd_cp.md
+      - Identity: schema/erd_identity.md
+      - Health: schema/erd_health.md
+      - EHCP: schema/erd_ehcp.md
+      - SEND: schema/erd_send.md
+      - Early Help: schema/erd_early_help.md
+      - Care Leavers: schema/erd_care_leavers.md
+      - Finance: schema/erd_finance.md
+      - Workforce: schema/erd_workforce.md
+      - SSD Admin: schema/erd_ssd_admin.md
 docs_dir: docs
 theme:
   name: material

@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_version_log
   fields:
@@ -51,3 +50,6 @@ nodes:
     categories:
     - admin
     guidance: SSD ADMIN only table/field
+  categories:
+  - admin
+  _inferred: true

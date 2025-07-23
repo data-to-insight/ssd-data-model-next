@@ -1,0 +1,121 @@
+---
+nodes:
+- name: ssd_sdq_scores
+  fields:
+  - name: csdq_table_id
+    description: SDQ ID
+    item_ref: CSDQ001A
+    type: nvarchar
+    primary_key: true
+    validators:
+    - required:
+        enabled: true
+    - unique:
+        enabled: true
+    categories:
+    - looked_after
+    - sdq
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:csdq_table_id
+    - mosaic:csdq_table_id
+    cms_table:
+    - liquid_logic:ssd_sdq_scores
+    - mosaic:ssd_sdq_scores
+    guidance: Row identifier for the ssd_sdq_scores table
+  - name: csdq_person_id
+    description: Person Unique ID
+    item_ref: CSDQ002A
+    type: nvarchar
+    foreign_key: ssd_cla_episodes.clae_person_id
+    validators:
+    - required:
+        enabled: true
+    categories:
+    - looked_after
+    - sdq
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - eclipse
+    - caredirector
+    - azeus
+    cms_field:
+    - liquid_logic:csdq_person_id
+    - mosaic:csdq_person_id
+    cms_table:
+    - liquid_logic:ssd_sdq_scores
+    - mosaic:ssd_sdq_scores
+    guidance: Person's ID generated in CMS Database
+  - name: csdq_sdq_completed_date
+    description: SDQ Completed Date
+    item_ref: CSDQ003A
+    type: datetime
+    categories:
+    - looked_after
+    - sdq
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:csdq_sdq_completed_date
+    - mosaic:csdq_sdq_completed_date
+    cms_table:
+    - liquid_logic:ssd_sdq_scores
+    - mosaic:ssd_sdq_scores
+    guidance: Date of completion of Strength and Difficulties Questionnaire (SDQ)
+  - name: csdq_sdq_reason
+    description: SDQ Reason
+    item_ref: CSDQ004A
+    type: nvarchar
+    categories:
+    - looked_after
+    - sdq
+    returns:
+    - SSDA903
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:csdq_sdq_reason
+    - mosaic:csdq_sdq_reason
+    cms_table:
+    - liquid_logic:ssd_sdq_scores
+    - mosaic:ssd_sdq_scores
+    guidance: "(currently 'PLACEHOLDER_DATA' pending further development) If it is\
+      \ not possible to collect the SDQ score for a looked-after child, then a reason\
+      \ should be recorded using the codes below.\nCode set\nSDQ1 - No form returned\
+      \ as child was aged under 4 or over 16 at date of latest assessment\nSDQ2 -\
+      \ Carer(s) refused to complete and return questionnaire\nSDQ3 - Not possible\
+      \ to complete the questionnaire due to severity of the child\u2019s disability\n\
+      SDQ4 - Other\nSDQ5 - Child or young person refuses to allow a strengths and\
+      \ difficulties questionnaire (SDQ) to be completed"
+  - name: csdq_sdq_score
+    description: SDQ Score
+    item_ref: CSDQ005A
+    type: nvarchar
+    categories:
+    - looked_after
+    - sdq
+    returns:
+    - SSDA903
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:csdq_sdq_score
+    - mosaic:csdq_sdq_score
+    cms_table:
+    - liquid_logic:ssd_sdq_scores
+    - mosaic:ssd_sdq_scores
+    guidance: "A single score (0\u201340), or a reason for the score not being returned\
+      \ is required for each child looked-after continuously for at least 12 months\
+      \ aged 4\u201316 on the date of the last assessment."

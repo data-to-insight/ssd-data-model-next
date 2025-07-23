@@ -1,3 +1,5 @@
+# PYTHONPATH=. python scripts/docs.generate_schema_dot.py
+
 from pathlib import Path
 import subprocess
 import yaml

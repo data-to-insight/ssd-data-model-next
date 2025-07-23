@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_linked_identifiers
   fields:
@@ -125,3 +124,13 @@ nodes:
     - mosaic:ssd_linked_identifiers
     guidance: (currently 'PLACEHOLDER_DATA' pending further development) Date the
       identifier ceases to be known/valid
+  categories:
+  - identity
+  - address
+  - linked_identifiers
+  - immigration
+  - mother
+  - convictions
+  - sdq
+  - voice_of_child
+  _inferred: true

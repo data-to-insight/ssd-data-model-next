@@ -1,0 +1,9 @@
+digraph G {
+  node [shape=record];
+  ssd_professionals [label="{ssd_professionals|prof_professional_id PK\lprof_staff_id\lprof_professional_name\lprof_social_worker_registration_no\lprof_professional_job_title\lprof_professional_caseload\lprof_professional_department\lprof_full_time_equivalency\lprof_agency_worker_flag\l}"];
+  ssd_department [label="{ssd_department|dept_team_id\ldept_team_name\ldept_team_parent_id → ssd_department.dept_team_id\ldept_team_parent_name\l}"];
+  ssd_involvements [label="{ssd_involvements|invo_involvements_id\linvo_professional_id → ssd_professionals.prof_professional_id\linvo_professional_role_id\linvo_professional_team → ssd_department.dept_team_id\linvo_involvement_start_date\linvo_involvement_end_date\linvo_worker_change_reason\linvo_person_id\linvo_referral_id\l}"];
+  ssd_department -> ssd_department [label="dept_team_parent_id"];
+  ssd_involvements -> ssd_professionals [label="invo_professional_id"];
+  ssd_involvements -> ssd_department [label="invo_professional_team"];
+}

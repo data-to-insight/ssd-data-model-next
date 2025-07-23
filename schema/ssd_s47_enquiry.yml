@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_s47_enquiry
   fields:
@@ -204,3 +203,11 @@ nodes:
     - liquid_logic:ssd_s47_enquiry
     - mosaic:ssd_s47_enquiry
     guidance: Section 47 Enquiry completed by Team
+  categories:
+  - child_protection
+  - conference
+  - plan
+  - review
+  - visit
+  - pre_proceedings
+  _inferred: true

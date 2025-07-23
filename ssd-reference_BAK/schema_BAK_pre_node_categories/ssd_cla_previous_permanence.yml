@@ -1,0 +1,135 @@
+---
+nodes:
+- name: ssd_cla_previous_permanence
+  fields:
+  - name: lapp_table_id
+    description: Previous Permanence ID
+    item_ref: LAPP001A
+    type: nvarchar
+    primary_key: true
+    categories:
+    - looked_after
+    - permanence
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:lapp_table_id
+    - mosaic:lapp_table_id
+    cms_table:
+    - liquid_logic:ssd_cla_previous_permanence
+    - mosaic:ssd_cla_previous_permanence
+    guidance: Row identifier for the ssd_previous_permanence table
+  - name: lapp_person_id
+    description: Person Unique ID
+    item_ref: LAPP002A
+    type: nvarchar
+    foreign_key: ssd_cla_episodes.clae_person_id
+    validators:
+    - required:
+        enabled: true
+    categories:
+    - looked_after
+    - permanence
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - eclipse
+    - caredirector
+    - azeus
+    cms_field:
+    - liquid_logic:lapp_person_id
+    - mosaic:lapp_person_id
+    cms_table:
+    - liquid_logic:ssd_cla_previous_permanence
+    - mosaic:ssd_cla_previous_permanence
+    guidance: Person's ID generated in CMS Database
+  - name: lapp_previous_permanence_order_date
+    description: Date of Previous Permanence Order
+    item_ref: LAPP003A
+    type: nvarchar
+    categories:
+    - looked_after
+    - permanence
+    returns:
+    - SSDA903
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:lapp_previous_permanence_order_date
+    - mosaic:lapp_previous_permanence_order_date
+    cms_table:
+    - liquid_logic:ssd_cla_previous_permanence
+    - mosaic:ssd_cla_previous_permanence
+    guidance: 'Date of the previous permanence order, if known. In line with the SSDA903
+      guidance, if the exact date is unknown, the month and year are recorded in the
+      form zz/MM/YYYY, using zz as the day, for example for May 2020 with the exact
+      date being unknown enter zz/05/2020.
+
+      If the month is unknown, the year is recorded in the form zz/zz/YYYY, for example,
+      where the year of 2021 only is known enter zz/zz/2021. If no information is
+      known about the date of the order, the date is recorded as zz/zz/zzzz.'
+  - name: lapp_previous_permanence_option
+    description: Previous Permanence Option
+    item_ref: LAPP004A
+    type: nvarchar
+    categories:
+    - looked_after
+    - permanence
+    returns:
+    - SSDA903
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:lapp_previous_permanence_option
+    - mosaic:lapp_previous_permanence_option
+    cms_table:
+    - liquid_logic:ssd_cla_previous_permanence
+    - mosaic:ssd_cla_previous_permanence
+    guidance: 'This should be completed for all children who start to be looked-after.
+
+      Information is collected for children who previously ceased to be looked-after
+      due to the granting of an adoption order, a special guardianship order, residence
+      order (until 22 April 2014) or a child arrangement order. Code set
+
+      P1 - Adoption
+
+      P2 - Special guardianship order (SGO)
+
+      P3 - Residence order (RO) or child arrangements order (CAO) which sets out with
+      whom the child is to live.
+
+      P4 - Unknown
+
+      Z1 - Child has not previously had a permanence option
+
+      P4 should be used when it is not known to the local authority whether the child
+      had a previous permanence option. This information can be updated if information
+      comes to light at any stage in an episode of care. Do not include any adoptions/SGO/ROs/CAOs
+      previously granted where the child was not previously looked-after.'
+  - name: lapp_previous_permanence_la
+    description: Previous Permanence Arranged LA
+    item_ref: LAPP005A
+    type: nvarchar
+    categories:
+    - looked_after
+    - permanence
+    returns:
+    - SSDA903
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:lapp_previous_permanence_la
+    - mosaic:lapp_previous_permanence_la
+    cms_table:
+    - liquid_logic:ssd_cla_previous_permanence
+    - mosaic:ssd_cla_previous_permanence
+    guidance: The name of the local authority who arranged the previous permanence
+      option.

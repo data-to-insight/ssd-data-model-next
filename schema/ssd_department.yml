@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_department
   fields:
@@ -51,3 +50,6 @@ nodes:
     - liquid_logic
     - mosaic
     guidance: Name description for department|team parent
+  categories:
+  - workforce
+  _inferred: true

@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_voice_of_child
   fields:
@@ -177,3 +176,13 @@ nodes:
       versions_count: 1
       impact_title: null
       type: New Feature
+  categories:
+  - identity
+  - address
+  - linked_identifiers
+  - immigration
+  - mother
+  - convictions
+  - sdq
+  - voice_of_child
+  _inferred: true

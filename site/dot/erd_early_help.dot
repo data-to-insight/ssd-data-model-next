@@ -1,0 +1,8 @@
+digraph G {
+  node [shape=record];
+  ssd_family [label="{ssd_family|fami_table_id\lfami_family_id PK\lfami_person_id → ssd_person.pers_person_id\l}"];
+  ssd_early_help_episodes [label="{ssd_early_help_episodes|earl_episode_id PK\learl_person_id → ssd_person.pers_person_id\learl_episode_start_date\learl_episode_end_date\learl_episode_reason\learl_episode_end_reason\learl_episode_organisation\learl_episode_worker_id → ssd_professionals.prof_professional_id\l}"];
+  ssd_family -> ssd_person [label="fami_person_id"];
+  ssd_early_help_episodes -> ssd_person [label="earl_person_id"];
+  ssd_early_help_episodes -> ssd_professionals [label="earl_episode_worker_id"];
+}

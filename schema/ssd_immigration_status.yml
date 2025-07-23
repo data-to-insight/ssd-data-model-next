@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_immigration_status
   fields:
@@ -113,3 +112,13 @@ nodes:
     - liquid_logic:ssd_immigration_status
     - mosaic:ssd_immigration_status
     guidance: End Date of Immigration Status
+  categories:
+  - identity
+  - address
+  - linked_identifiers
+  - immigration
+  - mother
+  - convictions
+  - sdq
+  - voice_of_child
+  _inferred: true

@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_cp_plans
   fields:
@@ -194,3 +193,11 @@ nodes:
       - Emotional abuse
 
       - Multiple: [List of relevant categories]'
+  categories:
+  - child_protection
+  - conference
+  - plan
+  - review
+  - visit
+  - pre_proceedings
+  _inferred: true

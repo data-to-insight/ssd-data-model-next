@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_initial_cp_conference
   fields:
@@ -253,3 +252,11 @@ nodes:
     - liquid_logic:ssd_initial_cp_conference
     - mosaic:ssd_initial_cp_conference
     guidance: Worker who organised the ICPC
+  categories:
+  - child_protection
+  - conference
+  - plan
+  - review
+  - visit
+  - pre_proceedings
+  _inferred: true

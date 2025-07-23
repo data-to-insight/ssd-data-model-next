@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_care_leavers
   fields:
@@ -318,3 +317,8 @@ nodes:
     - liquid_logic:ssd_care_leavers
     - mosaic:ssd_care_leavers
     guidance: Allocated worker responsible for Care Leaver
+  categories:
+  - care_leavers
+  - adoption
+  - permanence
+  _inferred: true

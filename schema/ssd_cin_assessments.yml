@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_cin_assessments
   fields:
@@ -235,3 +234,11 @@ nodes:
     - liquid_logic:ssd_cin_assessments
     - mosaic:ssd_cin_assessments
     guidance: Worker responsible for completing the Assessment
+  categories:
+  - child_in_need
+  - assessment
+  - plan
+  - referral
+  - visit
+  - factors
+  _inferred: true

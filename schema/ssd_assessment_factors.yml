@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_assessment_factors
   fields:
@@ -105,3 +104,11 @@ nodes:
       23A - Abuse linked to faith or belief - concerns child may be at risk due to\
       \ abuse linked to faith or belief.\n24A - Child criminal exploitation - concerns\
       \ child may be at risk of harm due to child criminal exploitation."
+  categories:
+  - child_in_need
+  - assessment
+  - plan
+  - referral
+  - visit
+  - factors
+  _inferred: true

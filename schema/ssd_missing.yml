@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_missing
   fields:
@@ -176,3 +175,15 @@ nodes:
     - mosaic:ssd_missing
     guidance: Records whether the child accepted the Return Interview offered after
       their missing episode. Y/N/NA/NULL
+  categories:
+  - looked_after
+  - care_plan
+  - placement
+  - immunisations
+  - convictions
+  - substance_misuse
+  - health
+  - visits
+  - reviews
+  - episodes
+  _inferred: true

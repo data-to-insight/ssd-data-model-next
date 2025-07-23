@@ -1,0 +1,28 @@
+digraph G {
+  node [shape=record];
+  ssd_ehcp_requests [label="{ssd_ehcp_requests|ehcr_ehcp_request_id PK\lehcr_send_table_id → ssd_send.send_table_id\lehcr_ehcp_req_date\lehcr_ehcp_req_outcome_date\lehcr_ehcp_req_outcome\l}"];
+  ssd_linked_identifiers [label="{ssd_linked_identifiers|link_table_id PK\llink_person_id → ssd_person.pers_person_id\llink_identifier_type\llink_identifier_value\llink_valid_from_date\llink_valid_to_date\l}"];
+  ssd_family [label="{ssd_family|fami_table_id\lfami_family_id PK\lfami_person_id → ssd_person.pers_person_id\l}"];
+  ssd_sdq_scores [label="{ssd_sdq_scores|csdq_table_id PK\lcsdq_person_id → ssd_cla_episodes.clae_person_id\lcsdq_sdq_completed_date\lcsdq_sdq_reason\lcsdq_sdq_score\l}"];
+  ssd_cla_convictions [label="{ssd_cla_convictions|clac_cla_conviction_id PK\lclac_person_id → ssd_cla_episodes.clae_person_id\lclac_cla_conviction_date\lclac_cla_conviction_offence\l}"];
+  ssd_immigration_status [label="{ssd_immigration_status|immi_person_id → ssd_person.pers_person_id\limmi_immigration_status_id PK\limmi_immigration_status\limmi_immigration_status_start_date\limmi_immigration_status_end_date\l}"];
+  ssd_legal_status [label="{ssd_legal_status|lega_legal_status_id PK\llega_person_id → ssd_person.pers_person_id\llega_legal_status\llega_legal_status_start_date\llega_legal_status_end_date\l}"];
+  ssd_person [label="{ssd_person|pers_person_id PK\lpers_sex\lpers_gender\lpers_ethnicity\lpers_dob\lpers_common_child_id\lpers_legacy_id\lpers_upn_unknown\lpers_send_flag\lpers_expected_dob\lpers_death_date\lpers_is_mother\lpers_nationality\l}"];
+  ssd_send [label="{ssd_send|send_table_id PK\lsend_upn\lsend_uln\lsend_upn_unknown\lsend_person_id → ssd_person.pers_person_id\l}"];
+  ssd_mother [label="{ssd_mother|moth_table_id PK\lmoth_person_id → ssd_person.pers_person_id (field is both PK/FK)\lmoth_childs_person_id PK\lmoth_childs_dob\l}"];
+  ssd_address [label="{ssd_address|addr_table_id PK\laddr_address_json\laddr_person_id → ssd_person.pers_person_id\laddr_address_type\laddr_address_start_date\laddr_address_end_date\laddr_address_postcode\l}"];
+  ssd_voice_of_child [label="{ssd_voice_of_child|voch_table_id PK\lvoch_person_id → ssd_person.pers_person_id\lvoch_explained_worries\lvoch_story_help_understand\lvoch_agree_worker\lvoch_plan_safe\lvoch_tablet_help_explain\l}"];
+  ssd_disability [label="{ssd_disability|disa_person_id → ssd_person.pers_person_id\ldisa_table_id PK\ldisa_disability_code\l}"];
+  ssd_ehcp_requests -> ssd_send [label="ehcr_send_table_id"];
+  ssd_linked_identifiers -> ssd_person [label="link_person_id"];
+  ssd_family -> ssd_person [label="fami_person_id"];
+  ssd_sdq_scores -> ssd_cla_episodes [label="csdq_person_id"];
+  ssd_cla_convictions -> ssd_cla_episodes [label="clac_person_id"];
+  ssd_immigration_status -> ssd_person [label="immi_person_id"];
+  ssd_legal_status -> ssd_person [label="lega_person_id"];
+  ssd_send -> ssd_person [label="send_person_id"];
+  ssd_mother -> ssd_person [label="moth_person_id"];
+  ssd_address -> ssd_person [label="addr_person_id"];
+  ssd_voice_of_child -> ssd_person [label="voch_person_id"];
+  ssd_disability -> ssd_person [label="disa_person_id"];
+}

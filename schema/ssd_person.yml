@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_person
   fields:
@@ -343,3 +342,13 @@ nodes:
     - liquid_logic:ssd_person
     - mosaic:ssd_person
     guidance: Required for UASC, reported in the ADCS Safeguarding Pressures research.
+  categories:
+  - identity
+  - address
+  - linked_identifiers
+  - immigration
+  - mother
+  - convictions
+  - sdq
+  - voice_of_child
+  _inferred: true

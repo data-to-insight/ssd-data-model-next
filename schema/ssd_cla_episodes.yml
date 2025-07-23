@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_cla_episodes
   fields:
@@ -392,3 +391,15 @@ nodes:
     - liquid_logic:ssd_cla_episodes
     - mosaic:ssd_cla_episodes
     guidance: Date of Last IRO Visit/ Contact to the Child
+  categories:
+  - looked_after
+  - care_plan
+  - placement
+  - immunisations
+  - convictions
+  - substance_misuse
+  - health
+  - visits
+  - reviews
+  - episodes
+  _inferred: true

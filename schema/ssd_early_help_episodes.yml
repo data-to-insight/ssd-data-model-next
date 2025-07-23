@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_early_help_episodes
   fields:
@@ -165,3 +164,7 @@ nodes:
     - liquid_logic:ssd_early_help_episodes
     - mosaic:ssd_early_help_episodes
     guidance: Allocated worker responsible for Early Help provision
+  categories:
+  - early_help
+  - family
+  _inferred: true

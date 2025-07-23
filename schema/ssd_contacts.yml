@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_contacts
   fields:
@@ -128,3 +127,13 @@ nodes:
       { NEW_REFERRAL_FLAG: "", EXISTING_REFERRAL_FLAG: "", CP_ENQUIRY_FLAG: "", NFA_FLAG:
       "", NON_AGENCY_ADOPTION_FLAG: "", PRIVATE_FOSTERING_FLAG: "", ADVICE_FLAG: "",
       MISSING_FLAG: "", OLA_CP_FLAG: "", OTHER_OUTCOMES_EXIST_FLAG: "" }'
+  categories:
+  - child_in_need
+  - assessment
+  - plan
+  - referral
+  - visit
+  - factors
+  - need
+  - contact
+  _inferred: true

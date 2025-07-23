@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_cin_episodes
   fields:
@@ -318,3 +317,11 @@ nodes:
     - liquid_logic:ssd_cin_episodes
     - mosaic:ssd_cin_episodes
     guidance: Worker responsible for completing initial Referral
+  categories:
+  - child_in_need
+  - assessment
+  - plan
+  - referral
+  - visit
+  - factors
+  _inferred: true

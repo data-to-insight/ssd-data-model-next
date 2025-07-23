@@ -1,0 +1,130 @@
+---
+nodes:
+- name: ssd_contacts
+  fields:
+  - name: cont_contact_id
+    description: Contact ID
+    item_ref: CONT001A
+    type: nvarchar
+    primary_key: true
+    validators:
+    - required:
+        enabled: true
+    - unique:
+        enabled: true
+    categories:
+    - contact
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:cont_contact_id
+    - mosaic:cont_contact_id
+    cms_table:
+    - liquid_logic:ssd_contacts
+    - mosaic:ssd_contacts
+    guidance: Row identifier for the ssd_contacts table
+  - name: cont_person_id
+    description: Person Unique ID
+    item_ref: CONT002A
+    type: nvarchar
+    foreign_key: ssd_person.pers_person_id
+    validators:
+    - required:
+        enabled: true
+    categories:
+    - contact
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - eclipse
+    - caredirector
+    - azeus
+    cms_field:
+    - liquid_logic:cont_person_id
+    - mosaic:cont_person_id
+    cms_table:
+    - liquid_logic:ssd_contacts
+    - mosaic:ssd_contacts
+    guidance: Person's ID generated in CMS Database
+  - name: cont_contact_date
+    description: Date of Contact
+    item_ref: CONT003A
+    type: datetime
+    categories:
+    - contact
+    returns:
+    - AnnexA
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    - azeus
+    cms_field:
+    - liquid_logic:cont_contact_date
+    - mosaic:cont_contact_date
+    cms_table:
+    - liquid_logic:ssd_contacts
+    - mosaic:ssd_contacts
+    guidance: Date Contact received into LA
+  - name: cont_contact_source_code
+    description: Contact Source Code
+    item_ref: CONT004A
+    type: nvarchar
+    categories:
+    - contact
+    returns:
+    - AnnexA
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    - azeus
+    cms_field:
+    - liquid_logic:cont_contact_source_code
+    - mosaic:cont_contact_source_code
+    cms_table:
+    - liquid_logic:ssd_contacts
+    - mosaic:ssd_contacts
+    guidance: Contact Source Code
+  - name: cont_contact_source_desc
+    description: Contact Source Description
+    item_ref: CONT006A
+    type: nvarchar
+    categories:
+    - contact
+    returns:
+    - Local
+    guidance: Contact Source Description
+  - name: cont_contact_outcome_json
+    description: Contact Outcome
+    item_ref: CONT005A
+    type: nvarchar
+    categories:
+    - contact
+    returns:
+    - ADCS_SP
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:cont_contact_outcome_json
+    - mosaic:cont_contact_outcome_json
+    cms_table:
+    - liquid_logic:ssd_contacts
+    - mosaic:ssd_contacts
+    guidance: 'Outcome of the Contact. Combined dictionary/ json type containing the
+      following, AS cont_contact_outcome_json
+
+      ---------------------------------------
+
+      -- SSD standard - all keys in structure regardless of data presence
+
+      { NEW_REFERRAL_FLAG: "", EXISTING_REFERRAL_FLAG: "", CP_ENQUIRY_FLAG: "", NFA_FLAG:
+      "", NON_AGENCY_ADOPTION_FLAG: "", PRIVATE_FOSTERING_FLAG: "", ADVICE_FLAG: "",
+      MISSING_FLAG: "", OLA_CP_FLAG: "", OTHER_OUTCOMES_EXIST_FLAG: "" }'

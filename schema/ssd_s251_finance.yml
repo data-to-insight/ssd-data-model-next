@@ -1,4 +1,3 @@
----
 nodes:
 - name: ssd_s251_finance
   fields:
@@ -118,3 +117,6 @@ nodes:
     - mosaic:ssd_s251_finance
     guidance: (currently 'PLACEHOLDER_DATA' pending further development) No guidance
       available yet
+  categories:
+  - finance
+  _inferred: true

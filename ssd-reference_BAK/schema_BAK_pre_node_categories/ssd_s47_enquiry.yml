@@ -1,0 +1,206 @@
+---
+nodes:
+- name: ssd_s47_enquiry
+  fields:
+  - name: s47e_s47_enquiry_id
+    description: S47 Enquiry ID
+    item_ref: S47E001A
+    type: nvarchar
+    primary_key: true
+    validators:
+    - required:
+        enabled: true
+    - unique:
+        enabled: true
+    categories:
+    - s47_enquiry
+    - child_protection
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:s47e_s47_enquiry_id
+    - mosaic:s47e_s47_enquiry_id
+    cms_table:
+    - liquid_logic:ssd_s47_enquiry
+    - mosaic:ssd_s47_enquiry
+    guidance: Row identifier for the ssd_s47_enquiry table.
+  - name: s47e_referral_id
+    description: Referral ID
+    item_ref: S47E010A
+    type: nvarchar
+    foreign_key: ssd_cin_episodes.cine_referral_id
+    categories:
+    - s47_enquiry
+    - child_protection
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:s47e_referral_id
+    - mosaic:s47e_referral_id
+    cms_table:
+    - liquid_logic:ssd_s47_enquiry
+    - mosaic:ssd_s47_enquiry
+    guidance: ID for linking to CIN Referral Episode
+  - name: s47e_person_id
+    description: Person Unique ID
+    item_ref: S47E002A
+    type: nvarchar
+    foreign_key: ssd_person.pers_person_id
+    validators:
+    - required:
+        enabled: true
+    categories:
+    - s47_enquiry
+    - child_protection
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - eclipse
+    - caredirector
+    - azeus
+    cms_field:
+    - liquid_logic:s47e_person_id
+    - mosaic:s47e_person_id
+    cms_table:
+    - liquid_logic:ssd_s47_enquiry
+    - mosaic:ssd_s47_enquiry
+    guidance: Person's ID generated in CMS Database
+  - name: s47e_s47_start_date
+    description: S47 Start Date
+    item_ref: S47E004A
+    type: datetime
+    categories:
+    - s47_enquiry
+    - child_protection
+    returns:
+    - CIN
+    - RIIA
+    - AnnexA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:s47e_s47_start_date
+    - mosaic:s47e_s47_start_date
+    cms_table:
+    - liquid_logic:ssd_s47_enquiry
+    - mosaic:ssd_s47_enquiry
+    guidance: Date of the strategy discussion at which the Section 47 Enquiries were
+      initiated.
+  - name: s47e_s47_end_date
+    description: S47 End Date
+    item_ref: S47E005A
+    type: datetime
+    categories:
+    - s47_enquiry
+    - child_protection
+    returns:
+    - RIIA
+    - AnnexA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:s47e_s47_end_date
+    - mosaic:s47e_s47_end_date
+    cms_table:
+    - liquid_logic:ssd_s47_enquiry
+    - mosaic:ssd_s47_enquiry
+    guidance: The actual date on which the S47 Enquiry is completed and authorised.
+  - name: s47e_s47_nfa
+    description: S47 NFA
+    item_ref: S47E006A
+    type: nchar
+    categories:
+    - s47_enquiry
+    - child_protection
+    returns:
+    - AnnexA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:s47e_s47_nfa
+    - mosaic:s47e_s47_nfa
+    cms_table:
+    - liquid_logic:ssd_s47_enquiry
+    - mosaic:ssd_s47_enquiry
+    guidance: Standalone field showing whether or not the S47 Enquiry resulted in
+      No Further Action.
+  - name: s47e_s47_outcome_json
+    description: S47 Outcome
+    item_ref: S47E007A
+    type: nvarchar
+    categories:
+    - s47_enquiry
+    - child_protection
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:s47e_s47_outcome_json
+    - mosaic:s47e_s47_outcome_json
+    cms_table:
+    - liquid_logic:ssd_s47_enquiry
+    - mosaic:ssd_s47_enquiry
+    guidance: 'Outcome of the Section 47 Enquiry. Combined dictionary/ json type containing
+      the following, AS s47e_s47_outcome_json
+
+      ---------------------------------------
+
+      -- SSD standard - all keys in structure regardless of data presence
+
+      { NFA_FLAG: "", LEGAL_ACTION_FLAG: "", PROV_OF_SERVICES_FLAG: "", PROV_OF_SB_CARE_FLAG:
+      "", CP_CONFERENCE_FLAG: "", NFA_CONTINUE_SINGLE_FLAG: "", MONITOR_FLAG: "",
+      OTHER_OUTCOMES_EXIST_FLAG: "", TOTAL_NO_OF_OUTCOMES: , OUTCOME_COMMENTS: ""
+      }'
+  - name: s47e_s47_completed_by_worker_id
+    description: S47 Enquiries completed by worker
+    item_ref: S47E008A
+    type: nvarchar
+    foreign_key: ssd_professionals.prof_professional_id
+    categories:
+    - s47_enquiry
+    - child_protection
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:s47e_s47_completed_by_worker_name
+    - mosaic:s47e_s47_completed_by_worker_name
+    cms_table:
+    - liquid_logic:ssd_s47_enquiry
+    - mosaic:ssd_s47_enquiry
+    guidance: Section 47 Enquiry completed by Worker
+  - name: s47e_s47_completed_by_team
+    description: S47 Enquiries completed by team
+    item_ref: S47E009A
+    type: nvarchar
+    foreign_key: ssd_department.dept_team_id
+    categories:
+    - s47_enquiry
+    - child_protection
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:s47e_s47_completed_by_team_name
+    - mosaic:s47e_s47_completed_by_team_name
+    cms_table:
+    - liquid_logic:ssd_s47_enquiry
+    - mosaic:ssd_s47_enquiry
+    guidance: Section 47 Enquiry completed by Team
