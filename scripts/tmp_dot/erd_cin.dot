@@ -1,0 +1,25 @@
+digraph G {
+  node [shape=record];
+  ssd_assessment_factors [label="{ssd_assessment_factors|cinf_table_id PK\lcinf_assessment_id → ssd_cin_assessments.cina_assessment_id\lcinf_assessment_factors_json\l}"];
+  ssd_cin_assessments [label="{ssd_cin_assessments|cina_assessment_id PK\lcina_person_id → ssd_person.pers_person_id\lcina_referral_id → ssd_cin_episodes.cine_referral_id\lcina_assessment_start_date\lcina_assessment_child_seen\lcina_assessment_auth_date\lcina_assessment_outcome_json\lcina_assessment_outcome_nfa\lcina_assessment_team → ssd_department.dept_team_id\lcina_assessment_worker_id → ssd_professionals.prof_professional_id\l}"];
+  ssd_cin_episodes [label="{ssd_cin_episodes|cine_referral_id PK\lcine_person_id → ssd_person.pers_person_id\lcine_referral_date\lcine_cin_primary_need_code\lcine_referral_source_code\lcine_referral_source_desc\lcine_referral_outcome_json\lcine_referral_nfa\lcine_close_reason\lcine_close_date\lcine_referral_team → ssd_department.dept_team_id\lcine_referral_worker_id → ssd_professionals.prof_professional_id\l}"];
+  ssd_cla_visits [label="{ssd_cla_visits|clav_cla_visit_id PK\lclav_cla_id\lclav_person_id → ssd_cla_episodes.clae_person_id\lclav_cla_visit_date\lclav_cla_visit_seen\lclav_cla_visit_seen_alone\l}"];
+  ssd_cin_visits [label="{ssd_cin_visits|cinv_cin_visit_id PK\lcinv_person_id → ssd_cin_episodes.cine_person_id\lcinv_cin_visit_date\lcinv_cin_visit_seen\lcinv_cin_visit_seen_alone\lcinv_cin_visit_bedroom\l}"];
+  ssd_cp_visits [label="{ssd_cp_visits|cppv_cp_visit_id PK\lcppv_person_id → ssd_cp_plans.cppl_person_id\lcppv_cp_plan_id\lcppv_cp_visit_date\lcppv_cp_visit_seen\lcppv_cp_visit_seen_alone\lcppv_cp_visit_bedroom\l}"];
+  ssd_cin_plans [label="{ssd_cin_plans|cinp_cin_plan_id PK\lcinp_referral_id → ssd_cin_episodes.cine_referral_id\lcinp_person_id → ssd_person.pers_person_id\lcinp_cin_plan_start_date\lcinp_cin_plan_end_date\lcinp_cin_plan_team → ssd_department.dept_team_id\lcinp_cin_plan_worker_id → ssd_professionals.prof_professional_id\l}"];
+  ssd_assessment_factors -> ssd_cin_assessments [label="cinf_assessment_id"];
+  ssd_cin_assessments -> ssd_person [label="cina_person_id"];
+  ssd_cin_assessments -> ssd_cin_episodes [label="cina_referral_id"];
+  ssd_cin_assessments -> ssd_department [label="cina_assessment_team"];
+  ssd_cin_assessments -> ssd_professionals [label="cina_assessment_worker_id"];
+  ssd_cin_episodes -> ssd_person [label="cine_person_id"];
+  ssd_cin_episodes -> ssd_department [label="cine_referral_team"];
+  ssd_cin_episodes -> ssd_professionals [label="cine_referral_worker_id"];
+  ssd_cla_visits -> ssd_cla_episodes [label="clav_person_id"];
+  ssd_cin_visits -> ssd_cin_episodes [label="cinv_person_id"];
+  ssd_cp_visits -> ssd_cp_plans [label="cppv_person_id"];
+  ssd_cin_plans -> ssd_cin_episodes [label="cinp_referral_id"];
+  ssd_cin_plans -> ssd_person [label="cinp_person_id"];
+  ssd_cin_plans -> ssd_department [label="cinp_cin_plan_team"];
+  ssd_cin_plans -> ssd_professionals [label="cinp_cin_plan_worker_id"];
+}

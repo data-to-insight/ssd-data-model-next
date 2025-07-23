@@ -1,0 +1,10 @@
+site_name: SSD Data Model
+nav:
+  - Home: index.md
+  - Schema Diagrams:
+      - CLA: schema/erd_cla.md
+      - CIN: schema/erd_cin.md
+      - CP: schema/erd_cp.md
+docs_dir: docs
+theme:
+  name: material

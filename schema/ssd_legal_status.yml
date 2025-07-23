@@ -1,0 +1,122 @@
+---
+nodes:
+- name: ssd_legal_status
+  fields:
+  - name: lega_legal_status_id
+    description: Legal Status ID
+    item_ref: LEGA001A
+    type: nvarchar
+    primary_key: true
+    validators:
+    - required:
+        enabled: true
+    - unique:
+        enabled: true
+    categories:
+    - identity
+    - looked_after
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:lega_legal_status_id
+    - mosaic:lega_legal_status_id
+    cms_table:
+    - liquid_logic:ssd_legal_status
+    - mosaic:ssd_legal_status
+    guidance: Row identifier for the ssd_legal_status table
+  - name: lega_person_id
+    description: Person Unique ID
+    item_ref: LEGA002A
+    type: nvarchar
+    foreign_key: ssd_person.pers_person_id
+    validators:
+    - required:
+        enabled: true
+    categories:
+    - identity
+    - looked_after
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - eclipse
+    - caredirector
+    - azeus
+    cms_field:
+    - liquid_logic:lega_person_id
+    - mosaic:lega_person_id
+    cms_table:
+    - liquid_logic:ssd_legal_status
+    - mosaic:ssd_legal_status
+    guidance: Person's ID generated in CMS Database
+  - name: lega_legal_status
+    description: Legal Status
+    item_ref: LEGA003A
+    type: nvarchar
+    categories:
+    - identity
+    - looked_after
+    returns:
+    - SSDA903
+    - AnnexA
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:lega_legal_status
+    - mosaic:lega_legal_status
+    cms_table:
+    - liquid_logic:ssd_legal_status
+    - mosaic:ssd_legal_status
+    guidance: "Legal Status type. If a child is looked-after because it is accommodated,\
+      \ the legal status goes some way to describe (in legal terms at least) why the\
+      \ child is being looked after. There are many legal statuses arising from the\
+      \ Children Act, or the Youth Justice System, to which a child can be subject,\
+      \ but which have no bearing on whether a child is \u2018looked-after\u2019 or\
+      \ not. These are included in the SSD extract despite not being rerutned in the\
+      \ SSDA903. These incude statuses for permanence orders, e.g. Special Guardianship\
+      \ and Child Arrangement Orders, as well as Private Fostering and Care Leaver\
+      \ legal stauses, among others."
+  - name: lega_legal_status_start_date
+    description: Legal Status Start Date
+    item_ref: LEGA004A
+    type: datetime
+    categories:
+    - identity
+    - looked_after
+    returns:
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:lega_legal_status_start_date
+    - mosaic:lega_legal_status_start_date
+    cms_table:
+    - liquid_logic:ssd_legal_status
+    - mosaic:ssd_legal_status
+    guidance: Start Date of Legal Status
+  - name: lega_legal_status_end_date
+    description: Legal Status End Date
+    item_ref: LEGA005A
+    type: datetime
+    categories:
+    - identity
+    - looked_after
+    returns:
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:lega_legal_status_end_date
+    - mosaic:lega_legal_status_end_date
+    cms_table:
+    - liquid_logic:ssd_legal_status
+    - mosaic:ssd_legal_status
+    guidance: End Date of Legal Status
