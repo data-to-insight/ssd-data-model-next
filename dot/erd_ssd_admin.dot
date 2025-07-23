@@ -1,0 +1,4 @@
+digraph G {
+  node [shape=record];
+  ssd_version_log [label="{ssd_version_log|version_number\lrelease_date\ldescription\lis_current\lcreated_at\lcreated_by\limpact_description\l}"];
+}

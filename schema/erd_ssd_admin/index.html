@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../erd_cin/">
+        <link rel="prev" href="../erd_workforce/">
       
-      
-        <link rel="next" href="../erd_identity/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>CP - SSD Data Model</title>
+        <title>SSD Admin - SSD Data Model</title>
       
     
     
@@ -62,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cp-erd" class="md-skip">
+        <a href="#ssd_admin-erd" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CP
+              SSD Admin
             
           </span>
         </div>
@@ -299,32 +297,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    CP
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../erd_cp/" class="md-nav__link">
         
   
   
@@ -335,35 +311,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#table-field-previews" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table Field Previews
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -557,10 +504,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../erd_ssd_admin/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SSD Admin
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -571,6 +540,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-field-previews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Field Previews
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -634,315 +632,26 @@
 
 
 
-<h1 id="cp-erd">CP ERD</h1>
-<p><img alt="CP ERD" src="../../assets/images/erd_cp.svg" /></p>
-<p><a href="../../assets/images/erd_cp.svg">View full image</a>  |  <a href="../../assets/images/erd_cp.svg">Download SVG</a>  |  <a href="../../dot/erd_cp.dot">Download DOT file</a></p>
+<h1 id="ssd_admin-erd">SSD_ADMIN ERD</h1>
+<p><img alt="SSD_ADMIN ERD" src="../../assets/images/erd_ssd_admin.svg" /></p>
+<p><a href="../../assets/images/erd_ssd_admin.svg">View full image</a>  |  <a href="../../assets/images/erd_ssd_admin.svg">Download SVG</a>  |  <a href="../../dot/erd_ssd_admin.dot">Download DOT file</a></p>
 <h2 id="table-field-previews">Table Field Previews</h2>
-<p><strong>Tables in domain:</strong> 14</p>
+<p><strong>Tables in domain:</strong> 1</p>
 <details>
-<summary><strong>ssd_assessment_factors</strong></summary>
+<summary><strong>ssd_version_log</strong></summary>
 
 <table>
 <thead>
 <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
 </thead>
 <tbody>
-<tr><td>cinf_table_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>cinf_assessment_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cin_assessments">ssd_cin_assessments</a></td></tr>
-<tr><td>cinf_assessment_factors_json</td><td>nvarchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cin_assessments</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>cina_assessment_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>cina_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>cina_referral_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cin_episodes">ssd_cin_episodes</a></td></tr>
-<tr><td>cina_assessment_start_date</td><td>datetime</td><td></td></tr>
-<tr><td>cina_assessment_child_seen</td><td>nchar</td><td></td></tr>
-<tr><td>cina_assessment_auth_date</td><td>datetime</td><td></td></tr>
-<tr><td>cina_assessment_outcome_json</td><td>nvarchar</td><td></td></tr>
-<tr><td>cina_assessment_outcome_nfa</td><td>NCHAR</td><td></td></tr>
-<tr><td>cina_assessment_team</td><td>nvarchar</td><td>FK → ssd_department</td></tr>
-<tr><td>cina_assessment_worker_id</td><td>nvarchar</td><td>FK → ssd_professionals</td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cin_episodes</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>cine_referral_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>cine_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>cine_referral_date</td><td>datetime</td><td></td></tr>
-<tr><td>cine_cin_primary_need_code</td><td>nvarchar</td><td></td></tr>
-<tr><td>cine_referral_source_code</td><td>nvarchar</td><td></td></tr>
-<tr><td>cine_referral_source_desc</td><td>nvarchar</td><td></td></tr>
-<tr><td>cine_referral_outcome_json</td><td>nvarchar</td><td></td></tr>
-<tr><td>cine_referral_nfa</td><td>nchar</td><td></td></tr>
-<tr><td>cine_close_reason</td><td>nvarchar</td><td></td></tr>
-<tr><td>cine_close_date</td><td>datetime</td><td></td></tr>
-<tr><td>cine_referral_team</td><td>nvarchar</td><td>FK → ssd_department</td></tr>
-<tr><td>cine_referral_worker_id</td><td>nvarchar</td><td>FK → ssd_professionals</td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cin_plans</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>cinp_cin_plan_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>cinp_referral_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cin_episodes">ssd_cin_episodes</a></td></tr>
-<tr><td>cinp_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>cinp_cin_plan_start_date</td><td>datetime</td><td></td></tr>
-<tr><td>cinp_cin_plan_end_date</td><td>datetime</td><td></td></tr>
-<tr><td>cinp_cin_plan_team</td><td>nvarchar</td><td>FK → ssd_department</td></tr>
-<tr><td>cinp_cin_plan_worker_id</td><td>nvarchar</td><td>FK → ssd_professionals</td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cin_visits</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>cinv_cin_visit_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>cinv_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cin_episodes">ssd_cin_episodes</a></td></tr>
-<tr><td>cinv_cin_visit_date</td><td>datetime</td><td></td></tr>
-<tr><td>cinv_cin_visit_seen</td><td>nchar</td><td></td></tr>
-<tr><td>cinv_cin_visit_seen_alone</td><td>nchar</td><td></td></tr>
-<tr><td>cinv_cin_visit_bedroom</td><td>NCHAR</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cla_reviews</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>clar_cla_review_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>clar_cla_id</td><td>nvarchar</td><td>FK → ssd_cla_episodes</td></tr>
-<tr><td>clar_cla_review_due_date</td><td>datetime</td><td></td></tr>
-<tr><td>clar_cla_review_date</td><td>datetime</td><td></td></tr>
-<tr><td>clar_cla_review_cancelled</td><td>nchar</td><td></td></tr>
-<tr><td>clar_cla_review_participation</td><td>nvarchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cla_visits</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>clav_cla_visit_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>clav_cla_id</td><td>nvarchar</td><td></td></tr>
-<tr><td>clav_person_id</td><td>nvarchar</td><td>FK → ssd_cla_episodes</td></tr>
-<tr><td>clav_cla_visit_date</td><td>datetime</td><td></td></tr>
-<tr><td>clav_cla_visit_seen</td><td>nchar</td><td></td></tr>
-<tr><td>clav_cla_visit_seen_alone</td><td>nchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_contacts</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>cont_contact_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>cont_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>cont_contact_date</td><td>datetime</td><td></td></tr>
-<tr><td>cont_contact_source_code</td><td>nvarchar</td><td></td></tr>
-<tr><td>cont_contact_source_desc</td><td>nvarchar</td><td></td></tr>
-<tr><td>cont_contact_outcome_json</td><td>nvarchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cp_plans</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>cppl_cp_plan_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>cppl_referral_id</td><td>nvarchar</td><td></td></tr>
-<tr><td>cppl_icpc_id</td><td>nvarchar</td><td>FK → <a href="#ssd_initial_cp_conference">ssd_initial_cp_conference</a></td></tr>
-<tr><td>cppl_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>cppl_cp_plan_start_date</td><td>datetime</td><td></td></tr>
-<tr><td>cppl_cp_plan_end_date</td><td>datetime</td><td></td></tr>
-<tr><td>cppl_cp_plan_initial_category</td><td>nvarchar</td><td></td></tr>
-<tr><td>cppl_cp_plan_ola</td><td>nchar</td><td></td></tr>
-<tr><td>cppl_cp_plan_latest_category</td><td>nvarchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cp_reviews</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>cppr_cp_review_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>cppr_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cp_plans">ssd_cp_plans</a></td></tr>
-<tr><td>cppr_cp_plan_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cp_plans">ssd_cp_plans</a></td></tr>
-<tr><td>cppr_cp_review_due</td><td>datetime</td><td></td></tr>
-<tr><td>cppr_cp_review_date</td><td>datetime</td><td></td></tr>
-<tr><td>cppr_cp_review_meeting_id</td><td>nvarchar</td><td></td></tr>
-<tr><td>cppr_cp_review_outcome_continue_cp</td><td>nchar</td><td></td></tr>
-<tr><td>cppr_cp_review_quorate</td><td>nchar</td><td></td></tr>
-<tr><td>cppr_cp_review_participation</td><td>nchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cp_visits</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>cppv_cp_visit_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>cppv_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cp_plans">ssd_cp_plans</a></td></tr>
-<tr><td>cppv_cp_plan_id</td><td>nvarchar</td><td></td></tr>
-<tr><td>cppv_cp_visit_date</td><td>datetime</td><td></td></tr>
-<tr><td>cppv_cp_visit_seen</td><td>nchar</td><td></td></tr>
-<tr><td>cppv_cp_visit_seen_alone</td><td>nchar</td><td></td></tr>
-<tr><td>cppv_cp_visit_bedroom</td><td>nchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_initial_cp_conference</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>icpc_icpc_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>icpc_icpc_meeting_id</td><td>nvarchar</td><td></td></tr>
-<tr><td>icpc_s47_enquiry_id</td><td>nvarchar</td><td>FK → <a href="#ssd_s47_enquiry">ssd_s47_enquiry</a></td></tr>
-<tr><td>icpc_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>icpc_cp_plan_id</td><td>nvarchar</td><td></td></tr>
-<tr><td>icpc_referral_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cin_episodes">ssd_cin_episodes</a></td></tr>
-<tr><td>icpc_icpc_transfer_in</td><td>nchar</td><td></td></tr>
-<tr><td>icpc_icpc_target_date</td><td>datetime</td><td></td></tr>
-<tr><td>icpc_icpc_date</td><td>datetime</td><td></td></tr>
-<tr><td>icpc_icpc_outcome_cp_flag</td><td>nchar</td><td></td></tr>
-<tr><td>icpc_icpc_outcome_json</td><td>nvarchar</td><td></td></tr>
-<tr><td>icpc_icpc_team</td><td>nvarchar</td><td>FK → ssd_department</td></tr>
-<tr><td>icpc_icpc_worker_id</td><td>nvarchar</td><td>FK → ssd_professionals</td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_pre_proceedings</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>prep_table_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>prep_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>prep_plo_family_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>prep_pre_pro_decision_date</td><td>datetime</td><td></td></tr>
-<tr><td>prep_initial_pre_pro_meeting_date</td><td>datetime</td><td></td></tr>
-<tr><td>prep_pre_pro_outcome</td><td>nvarchar</td><td></td></tr>
-<tr><td>prep_agree_stepdown_issue_date</td><td>datetime</td><td></td></tr>
-<tr><td>prep_cp_plans_referral_period</td><td>int</td><td></td></tr>
-<tr><td>prep_legal_gateway_outcome</td><td>nvarchar</td><td></td></tr>
-<tr><td>prep_prev_pre_proc_child</td><td>int</td><td></td></tr>
-<tr><td>prep_prev_care_proc_child</td><td>int</td><td></td></tr>
-<tr><td>prep_pre_pro_letter_date</td><td>datetime</td><td></td></tr>
-<tr><td>prep_care_pro_letter_date</td><td>datetime</td><td></td></tr>
-<tr><td>prep_pre_pro_meetings_num</td><td>int</td><td></td></tr>
-<tr><td>prep_pre_pro_parents_legal_rep</td><td>nchar</td><td></td></tr>
-<tr><td>prep_parents_legal_rep_point_of_issue</td><td>nchar</td><td></td></tr>
-<tr><td>prep_court_reference</td><td>nvarchar</td><td></td></tr>
-<tr><td>prep_care_proc_court_hearings</td><td>int</td><td></td></tr>
-<tr><td>prep_care_proc_short_notice</td><td>nchar</td><td></td></tr>
-<tr><td>prep_proc_short_notice_reason</td><td>nvarchar</td><td></td></tr>
-<tr><td>prep_la_inital_plan_approved</td><td>nchar</td><td></td></tr>
-<tr><td>prep_la_initial_care_plan</td><td>nvarchar</td><td></td></tr>
-<tr><td>prep_la_final_plan_approved</td><td>nchar</td><td></td></tr>
-<tr><td>prep_la_final_care_plan</td><td>nvarchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_s47_enquiry</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>s47e_s47_enquiry_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>s47e_referral_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cin_episodes">ssd_cin_episodes</a></td></tr>
-<tr><td>s47e_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>s47e_s47_start_date</td><td>datetime</td><td></td></tr>
-<tr><td>s47e_s47_end_date</td><td>datetime</td><td></td></tr>
-<tr><td>s47e_s47_nfa</td><td>nchar</td><td></td></tr>
-<tr><td>s47e_s47_outcome_json</td><td>nvarchar</td><td></td></tr>
-<tr><td>s47e_s47_completed_by_worker_id</td><td>nvarchar</td><td>FK → ssd_professionals</td></tr>
-<tr><td>s47e_s47_completed_by_team</td><td>nvarchar</td><td>FK → ssd_department</td></tr>
+<tr><td>version_number</td><td>nvarchar</td><td></td></tr>
+<tr><td>release_date</td><td>Datetime</td><td></td></tr>
+<tr><td>description</td><td>nvarchar</td><td></td></tr>
+<tr><td>is_current</td><td>Bit</td><td></td></tr>
+<tr><td>created_at</td><td>Datetime</td><td></td></tr>
+<tr><td>created_by</td><td>nvarchar</td><td></td></tr>
+<tr><td>impact_description</td><td>nvarchar</td><td></td></tr>
 </tbody>
 </table>
 
