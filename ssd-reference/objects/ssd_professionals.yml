@@ -1,0 +1,153 @@
+---
+nodes:
+- name: ssd_professionals
+  fields:
+  - name: prof_professional_id
+    description: Professionals table row ID
+    item_ref: PROF001A
+    type: nvarchar
+    primary_key: true
+    categories:
+    - workforce
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    cms_field:
+    - liquid_logic:prof_professional_id
+    - mosaic:prof_professional_id
+    cms_table:
+    - liquid_logic:ssd_professionals
+    - mosaic:ssd_professionals
+    guidance: System generated worker ID field
+  - name: prof_staff_id
+    description: Staff Identifier
+    item_ref: PROF010A
+    type: nvarchar
+    categories:
+    - workforce
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - azeus
+    guidance: Staff ID used within reporting. Not all professionals are expected to
+      have a staff_id e.g. External Agency|GP
+  - name: prof_professional_name
+    description: Staff name
+    item_ref: PROF013A
+    type: nvarchar
+    categories:
+    - workforce
+    returns:
+    - AnnexA
+    cms:
+    - liquid_logic
+    - mosaic
+    - azeus
+    guidance: Professional's Name
+  - name: prof_social_worker_registration_no
+    description: Social worker ID - Social Work England (SWE) registration number-
+      if available
+    item_ref: PROF002A
+    type: nvarchar
+    categories:
+    - workforce
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - azeus
+    cms_field:
+    - liquid_logic:prof_social_worker_registration_no
+    - mosaic:prof_social_worker_registration_no
+    cms_table:
+    - liquid_logic:ssd_professionals
+    - mosaic:ssd_professionals
+    guidance: "This is the child and family social worker Social Work England (SWE)\
+      \ number (formerly HCPC code). For social workers this will start \u2018SW\u2019\
+      . This data item should be in the format \u2018AAnnnnnn\u2019 and is up to 12\
+      \ digits."
+  - name: prof_professional_job_title
+    description: Worker job title e.g. Social Worker
+    item_ref: PROF007A
+    type: nvarchar
+    categories:
+    - workforce
+    returns:
+    - CSCWF
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:prof_professional_job_title
+    - mosaic:prof_professional_job_title
+    cms_table:
+    - liquid_logic:ssd_professionals
+    - mosaic:ssd_professionals
+    guidance: Professional Job title, e.g. Social Worker, Keyworker, GP etc.
+  - name: prof_professional_caseload
+    description: Number of cases held on previous 30th Sept
+    item_ref: PROF008A
+    type: int
+    categories:
+    - workforce
+    returns:
+    - CSCWF
+    - RIIA
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:prof_professional_caseload
+    - mosaic:prof_professional_caseload
+    cms_table:
+    - liquid_logic:ssd_professionals
+    - mosaic:ssd_professionals
+    guidance: Caseload calculated based on SSD time frame for each worker(using prof_professional_id)
+  - name: prof_professional_department
+    description: Worker Department e.g. 'Youth Support Team West'
+    item_ref: PROF012A
+    type: nvarchar
+    categories:
+    - workforce
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:prof_professional_department
+    - mosaic:prof_professional_department
+    guidance: Professional's team/ organisation
+  - name: prof_full_time_equivalency
+    description: Full Time Equivalency
+    item_ref: PROF011A
+    type: float
+    categories:
+    - workforce
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:prof_full_time_equivalency
+    - mosaic:prof_full_time_equivalency
+    guidance: Worker FTE
+  - name: prof_agency_worker_flag
+    description: Flag for whether the worker is agency
+    item_ref: PROF014A
+    type: NCHAR
+    categories:
+    - workforce
+    returns:
+    - Local
+    cms_field:
+    - liquid_logic:prof_agency_worker_flag
+    - mosaic:prof_agency_worker_flag
+    guidance: (currently 'PLACEHOLDER_DATA' pending further development) Y/N flag
+      indicating if worker is an Agency worker

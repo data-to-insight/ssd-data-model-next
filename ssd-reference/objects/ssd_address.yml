@@ -1,0 +1,168 @@
+---
+nodes:
+- name: ssd_address
+  fields:
+  - name: addr_table_id
+    description: Address table row ID
+    item_ref: ADDR007A
+    type: nvarchar
+    primary_key: true
+    validators:
+    - required:
+        enabled: true
+    - unique:
+        enabled: true
+    categories:
+    - identity
+    - address
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:addr_table_id
+    - mosaic:addr_table_id
+    cms_table:
+    - liquid_logic:ssd_address
+    - mosaic:ssd_address
+    guidance: Row identifier for the ssd_address table
+  - name: addr_address_json
+    description: Address
+    item_ref: ADDR001A
+    type: nvarchar
+    validators:
+    - required:
+        enabled: true
+    - unique:
+        enabled: true
+    categories:
+    - identity
+    - address
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - eclipse
+    - caredirector
+    - azeus
+    cms_field:
+    - liquid_logic:addr_address_json
+    - mosaic:addr_address_json
+    cms_table:
+    - liquid_logic:ssd_address
+    - mosaic:ssd_address
+    guidance: 'Persons address Combined dictionary/ json type containing the following,
+      AS addr_address_json
+
+      ---------------------------------------
+
+      -- SSD standard - all keys in structure regardless of data presence
+
+      { ROOM: "", FLOOR: "", FLAT: "", BUILDING: "", HOUSE: "", STREET: "", TOWN:
+      "", UPRN: "", EASTING: "", NORTHING: "" }'
+  - name: addr_person_id
+    description: Person Unique ID
+    item_ref: ADDR002A
+    type: nvarchar
+    foreign_key: ssd_person.pers_person_id
+    categories:
+    - identity
+    - address
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - eclipse
+    - caredirector
+    - azeus
+    cms_field:
+    - liquid_logic:addr_person_id
+    - mosaic:addr_person_id
+    cms_table:
+    - liquid_logic:ssd_address
+    - mosaic:ssd_address
+    guidance: Person's ID generated in CMS Database
+  - name: addr_address_type
+    description: Address Type
+    item_ref: ADDR003A
+    type: nvarchar
+    categories:
+    - identity
+    - address
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:addr_address_type
+    - mosaic:addr_address_type
+    cms_table:
+    - liquid_logic:ssd_address
+    - mosaic:ssd_address
+    guidance: Type of Address, e.g. Home/ Placement/ Primary etc.
+  - name: addr_address_start_date
+    description: Address Start Date/ From
+    item_ref: ADDR004A
+    type: datetime
+    categories:
+    - identity
+    - address
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:addr_address_start_date
+    - mosaic:addr_address_start_date
+    cms_table:
+    - liquid_logic:ssd_address
+    - mosaic:ssd_address
+    guidance: Date person started living at the address
+  - name: addr_address_end_date
+    description: Address End Date/ To
+    item_ref: ADDR005A
+    type: datetime
+    categories:
+    - identity
+    - address
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:address_end
+    - mosaic:address_end
+    cms_table:
+    - liquid_logic:ssd_address
+    - mosaic:ssd_address
+    guidance: Date person left the address
+  - name: addr_address_postcode
+    description: Address Postcode
+    item_ref: ADDR006A
+    type: nvarchar
+    categories:
+    - identity
+    - address
+    returns:
+    - SSDA903
+    - AnnexA
+    - SEN2
+    cms:
+    - liquid_logic
+    - mosaic
+    - eclipse
+    - caredirector
+    - azeus
+    cms_field:
+    - liquid_logic:addr_address_postcode
+    - mosaic:addr_address_postcode
+    cms_table:
+    - liquid_logic:ssd_address
+    - mosaic:ssd_address
+    guidance: Address Postcode, auto-formatted to remove spaces for consistency

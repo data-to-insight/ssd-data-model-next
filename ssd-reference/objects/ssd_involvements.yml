@@ -1,0 +1,138 @@
+---
+nodes:
+- name: ssd_involvements
+  fields:
+  - name: invo_involvements_id
+    description: Involvements table row ID
+    item_ref: INVO005A
+    type: nvarchar
+    categories:
+    - workforce
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:invo_involvements_id
+    - mosaic:invo_involvements_id
+    guidance: Row identifier for the ssd_involvements table
+  - name: invo_professional_id
+    description: Worker ID
+    item_ref: INVO006A
+    type: nvarchar
+    foreign_key: ssd_professionals.prof_professional_id
+    categories:
+    - workforce
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    guidance: ID for linking to ssd_professionals table
+  - name: invo_professional_role_id
+    description: Worker role e.g. Allocated Case Worker
+    item_ref: INVO007A
+    type: nvarchar
+    categories:
+    - workforce
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    guidance: Role of the professional/ team working with the child/ young person
+  - name: invo_professional_team
+    description: Worker Team
+    item_ref: INVO009A
+    type: nvarchar
+    foreign_key: ssd_department.dept_team_id
+    categories:
+    - workforce
+    returns:
+    - AnnexA
+    cms:
+    - liquid_logic
+    - mosaic
+    guidance: Name of the Team working with the child/ young person
+  - name: invo_involvement_start_date
+    description: Social worker episode start date
+    item_ref: INVO002A
+    type: datetime
+    categories:
+    - workforce
+    returns:
+    - RIIA
+    cms:
+    - liquid_logic
+    - azeus
+    cms_field:
+    - liquid_logic:invo_involvement_start_date
+    - mosaic:invo_involvement_start_date
+    cms_table:
+    - liquid_logic:ssd_involvements
+    - mosaic:ssd_involvements
+    guidance: Start Date for team/ worker involvement
+  - name: invo_involvement_end_date
+    description: Social worker episode end date
+    item_ref: INVO003A
+    type: datetime
+    categories:
+    - workforce
+    returns:
+    - RIIA
+    cms:
+    - liquid_logic
+    - azeus
+    cms_field:
+    - liquid_logic:invo_involvement_end_date
+    - mosaic:invo_involvement_end_date
+    cms_table:
+    - liquid_logic:ssd_involvements
+    - mosaic:ssd_involvements
+    guidance: End Date for team/ worker involvement
+  - name: invo_worker_change_reason
+    description: Reason for worker change
+    item_ref: INVO004A
+    type: nvarchar
+    categories:
+    - workforce
+    returns:
+    - RIIA
+    cms:
+    - liquid_logic
+    - azeus
+    cms_field:
+    - liquid_logic:invo_worker_change_reason
+    - mosaic:invo_worker_change_reason
+    cms_table:
+    - liquid_logic:ssd_involvements
+    - mosaic:ssd_involvements
+    guidance: Reason for change of Social Worker Code set MANAGE - Managing Caseloads
+      FCONTA - First contact or re-referral LEFTRL - Previous social worker left role
+      ORGRST - New social worker assigned following organisational restructure TSPROC
+      - New social worker assigned following child transfer due to standard process
+      ABSENC - Absence cover or return from absence CHCHAN - Child requested change
+      from previous social worker PCCHAN - Parent/carer requested change from previous
+      social worker SWDIED - Previous Social Worker died OTHERS - Other reason
+  - name: invo_person_id
+    description: Person Unique ID
+    item_ref: INVO011A
+    type: nvarchar
+    categories:
+    - workforce
+    returns:
+    - Local
+    guidance: Person's ID generated in CMS Database
+  - name: invo_referral_id
+    description: Referral ID
+    item_ref: INVO010A
+    type: nvarchar
+    categories:
+    - workforce
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    guidance: ID for linking to CIN Referral Episode

@@ -1,0 +1,69 @@
+---
+nodes:
+- name: ssd_cla_immunisations
+  fields:
+  - name: clai_person_id
+    description: Person Unique ID
+    item_ref: CLAI002A
+    type: nvarchar
+    foreign_key: ssd_cla_episodes.clae_person_id
+    validators:
+    - required:
+        enabled: true
+    categories:
+    - looked_after
+    - health
+    - immunisations
+    returns:
+    - Local
+    cms:
+    - liquid_logic
+    - mosaic
+    - eclipse
+    - caredirector
+    - azeus
+    cms_field:
+    - liquid_logic:clai_person_id
+    - mosaic:clai_person_id
+    cms_table:
+    - liquid_logic:ssd_cla_immunisations
+    - mosaic:ssd_cla_immunisations
+    guidance: Person's ID generated in CMS Database, Row identifier for the ssd_cla_immunisations
+      table
+  - name: clai_immunisations_status
+    description: Immunisations up to Date
+    item_ref: CLAI004A
+    type: nchar
+    categories:
+    - looked_after
+    - health
+    - immunisations
+    returns:
+    - SSDA903
+    cms:
+    - liquid_logic
+    - mosaic
+    cms_field:
+    - liquid_logic:clai_immunisations_status
+    - mosaic:clai_immunisations_status
+    cms_table:
+    - liquid_logic:ssd_cla_immunisations
+    - mosaic:ssd_cla_immunisations
+    guidance: Immunisations up to date? Y/N
+  - name: clai_immunisations_status_date
+    description: Immunisations Last Updated Date
+    item_ref: CLAI005A
+    type: datetime
+    categories:
+    - looked_after
+    - health
+    - immunisations
+    returns:
+    - Local
+    cms_field:
+    - liquid_logic:clai_immunisations_status_date
+    - mosaic:clai_immunisations_status_date
+    cms_table:
+    - liquid_logic:ssd_cla_immunisations
+    - mosaic:ssd_cla_immunisations
+    guidance: Immunisations status last updated
