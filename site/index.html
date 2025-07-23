@@ -378,15 +378,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#categories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Categories
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       Output
@@ -727,15 +718,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#categories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Categories
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       Output
@@ -825,7 +807,7 @@ Current phase : <a href="#current-phase">deployment</a>. </p>
 <h3 id="specification">Specification</h3>
 <p>The SSD specification has been developed through extensive sector research, consideration of existing DfE returns, concurrent DfE projects, 130hrs+ of direct user research with Local Authorities and stakeholders. Project specification development has been made transparent at the monthly DfE Show &amp; Tells (as part of the DDSF S&amp;T's March'23-Feb'24) concurrent with the aforementioned oversight and governance. </p>
 <p>The project will use <a href="https://git-scm.com/">GIT</a> to track and approve proposed changes to the safeguarding data standard.
-The object specification input file[csv] can be found in the <a href="./docs/admin">admin</a> subfolder, and there is further ongoing work to provide further 'human readable' reporting methods beyond the aforementioned <a href="https://data-to-insight.github.io/ssd-data-model/">data object conceptual model</a>. We are aiming to publish our full data-landscape overview that resulted in the specification. </p>
+There is further ongoing work to provide further 'human readable' reporting methods beyond the aforementioned <a href="https://data-to-insight.github.io/ssd-data-model-next/">data object conceptual model</a>. We have published our <a href="https://www.datatoinsight.org/publications-1/standard-safeguarding-dataset---technical-workshops-synthesis-october-2023">full data-landscape overview that resulted in the specification</a> and have DfE agreement to publish the <a href="https://www.datatoinsight.org/publications-1/standard-safeguarding-dataset---final-report">final SSD report/DDSF findings here</a></p>
 <h4 id="ssd-in-conjuction-with-projectsectordevelopments">SSD in conjuction with (project|sector)developments</h4>
 <p>As part of the projects research and initial scoping, the team have considered input and results from all of the following sector developments towards ensuring that the SSD take current and changing LA/DfE needs into account. 
 - CSC National Framework<br />
@@ -851,12 +833,12 @@ The object specification input file[csv] can be found in the <a href="./docs/adm
 <h3 id="data-objects-conceptual-model">Data objects Conceptual Model</h3>
 <p>Defining the scope of objects/data points capturing LA Childrens Services data during the different stages of an individual's progress through the CSC system(s). Published for iterative review.</p>
 <ul>
-<li><a href="https://data-to-insight.github.io/ssd-data-model/index.html">data object/conceptual model</a></li>
-<li><a href="https://data-to-insight.github.io/ssd-data-model/guidance.html">data object/item-guidance model</a></li>
-<li><a href="https://data-to-insight.github.io/ssd-data-model/existingreturnsmap.html">existing data returns map</a></li>
+<li><a href="https://data-to-insight.github.io/ssd-data-model-next">TBC-data object/conceptual model</a></li>
+<li><a href="https://data-to-insight.github.io/ssd-data-model-next/">TBC-data object/item-guidance model</a></li>
+<li><a href="https://data-to-insight.github.io/ssd-data-model-next">TBC-existing data returns map</a></li>
 </ul>
 <h3 id="change-log">Change log</h3>
-<p>Agreed data item-level changes are assigned an identifier, and will be traceable within the <a href="./CHANGELOG.md">changelog.md</a>. A sub-set of the change details for the most recent change (if any) also appear within each objects metadata block within the YAML file(s). The current change log contains sample data until we deploy the first pilot release. Note: Object-level change tracking is not yet available/in progress; feedback/suggestions welcomed. </p>
+<p>Agreed data item-level changes are assigned an identifier, and will be traceable within the <a href="CHANGELOG/">changelog.md</a>. A sub-set of the change details for the most recent change (if any) also appear within each objects metadata block within the YAML file(s). The current change log contains sample data until we deploy the first pilot release. Note: Object-level change tracking is not yet available/in progress; feedback/suggestions welcomed. </p>
 <pre><code class="language-yaml">- name: &lt;data object name&gt;
   fields:
   - [...]
@@ -869,7 +851,7 @@ The object specification input file[csv] can be found in the <a href="./docs/adm
 </code></pre>
 <h3 id="data-objects">Data objects</h3>
 <p>The data model is described using [YAML][yaml], which is designed to be a "human friendly" data format, offering a more readable structure than such as XML/JSON, a reduced storage/processing footprint and in combination with Git provides an audit trail of changes that can be tracked.</p>
-<p>The <a href="./data/objects">objects</a> folder contains definition for the specification, data objects as well as details
+<p>The <a href="./docs/schema">objects</a> folder contains definition for the specification, data objects as well as details
 of synthetic data parameters and validation rules that apply to each field within the object. At the moment, the validation definitions do not reference back to the stat-returns validation process. </p>
 <p>An example data object contains a description and a set of fields for that record. The fields have an ID (the key), a name,
 type, description, which cms systems the data item/field is available on and any comments,</p>
@@ -901,23 +883,9 @@ type, description, which cms systems the data item/field is available on and any
       change_type: &lt;bug|new feature|change|...tbc&gt;
     [...]
 </code></pre>
-<h3 id="categories">Categories</h3>
-<p>The <a href="./data/categories">categories</a> folder holds the dimensions as referenced by <code>Categorical</code> and <code>List</code> datatypes.
-A Dimension object has a value and description, where the value is what would normally be expected to be transferred
-in an interchange format. The description is optional, and is not provided where the value is descriptive enough.</p>
-<p>The YAML category files can either hold a list of string values, e.g.</p>
-<pre><code class="language-yaml">- Value 1
-- Value 2
-</code></pre>
-<p>or a list of objects:</p>
-<pre><code class="language-yaml">- value: Value 1
-  description: A description of value 1
-- value: Value 2
-  description: A description of value 2
-</code></pre>
 <h3 id="output">Output</h3>
-<p>Since the specification is intended to be easy to maintain, and most case management and data management systems aren't YAML aware, the project is working towards providing an open source set of <a href="./tools/">tools</a> to perform the needed processing, incl. extract the required data items from current/known CMS systems and provide methods to allow the YAML object definitions to be easily updated from specification improvement updates or required revisions. Stakeholders and others are also invited to fork the repository and/or suggest changes to all elements of the project including definitions structure and code-base. </p>
-<p>Currently the YAML data objects, associated diagrams, documentation and website can be (re-)generated using the <a href="./tools/">tools</a>. The SQL[sql] tools are in development at the moment, but are aimed towards extracting the relevant data directly from different CMS systems in a CMS-agnostic approach; enabling the inclusion of both new data objects, new items in existing objects and revisions to both. SQL for each CMS type can be generated using the provided tools(Pilot includes only Liquid Logic and MOSAIC compatibility), and the resultant SQL scripts are output in the <a href="./sql/">SQL</a> folder. </p>
+<p>Since the specification is intended to be easy to maintain, and most case management and data management systems aren't YAML aware, the project is working towards providing an open source set of tools to perform the needed processing, incl. extract the required data items from current/known CMS systems and provide methods to allow the YAML object definitions to be easily updated from specification improvement updates or required revisions. Stakeholders and others are also invited to fork the repository and/or suggest changes to all elements of the project including definitions structure and code-base. </p>
+<p>Currently the YAML data objects, associated diagrams, documentation and website can be (re-)generated using the tools. The SQL[sql] tools are in development at the moment, but are aimed towards extracting the relevant data directly from different CMS systems in a CMS-agnostic approach; enabling the inclusion of both new data objects, new items in existing objects and revisions to both. SQL for each CMS type can be generated using the provided tools(Pilot includes only Liquid Logic and MOSAIC compatibility), and the resultant SQL scripts are output into an SQL folder. </p>
 <h3 id="current-phase"><a href="#current-phase">Current phase</a></h3>
 <p>The project is following a transparent and iterative development cycle, within the following deployment stages. Further stakeholder <a href="https://forms.office.com/e/UysrcGApJ1">feedback</a> and involvement is welcomed at any phase. LA's that wish to take part in the pilot deployment are further invited to <a href="mailto:datatoinsight.enquiries@gmail.com?subject=[GitHub]%Standard%Safeguarding%Dataset">get in touch</a>. </p>
 <table>
@@ -957,10 +925,10 @@ in an interchange format. The description is optional, and is not provided where
 </tbody>
 </table>
 <h2 id="repo-workflow">Repo workflow</h2>
-<p>In brief, folders <a href="./data/">data</a>, <a href="./docs/">docs</a> &amp; <a href="./sql/">sql</a> are output folders. Python scripts within the tools folder generate those files with the exception of <a href="./docs/admin">docs/admin</a> which contains the import csv definitions of all data objects &amp; relationships. <a href="./tools/">tools/*.py</a> are numbered to dictate their required run order when updating the specification. This workflow enables the entire project and all outputs to be instantly updated enabling full development transparency and ease of later updates both minor modifications and new modules/objects. It is anticipated that most LA's will only need to access the generated extract <a href="./sql/">SQL files</a> for their particular CMS. </p>
+<p>In progress...</p>
 <h3 id="repo-running-notes">Repo running notes</h3>
-<p>The Python based toolset will run within a <a href="https://github.com/codespaces/new?hide_repo_select=true&amp;ref=main&amp;repo=645832800">Git Codespace</a>. Use this link, then run the setup file, by typing the below command on the command-line. <br />
-Set up the working environment (will prompt Y/N part-way through, type 'y'to continue):</p>
+<p>The Python based toolset will run within a Git Codespace. Run the setup file, as below on the command-line. <br />
+Set up the working environment (may prompt Y/N part-way through, type 'y'to continue):</p>
 <pre><code class="language-bash">./setup.sh
 </code></pre>
 <p>For ref: The above bash script contains and runs <all> the following required commands so there is no further setup required. In some rare occasions, where 
@@ -972,7 +940,7 @@ Set up the working environment (will prompt Y/N part-way through, type 'y'to con
 
 [$] pip install poetry
 </code></pre>
-<p>The python tools(.py) are in <a href="./tools/">tools</a> folder. To run them, right click on the file and select 'run in terminal' or type filename on the commandline. This will only work if the setup.sh file has been already run to install the needed dependencies. </p>
+<p>Supplied additional python tools(.py) are in a tools folder. To run them, right click on the file and select 'run in terminal' or type filename on the commandline. This will only work if the setup.sh file has been already run to install the needed dependencies. </p>
 <h2 id="other-relevant-links">Other relevant links</h2>
 <p>[yaml] : https://yaml.org/</p>
 <p>[sql] : https://en.wikipedia.org/wiki/SQL/</p>
