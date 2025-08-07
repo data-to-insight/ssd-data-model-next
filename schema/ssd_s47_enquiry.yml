@@ -206,8 +206,10 @@ nodes:
   categories:
   - child_protection
   - conference
-  - plan
+  - cp_plan
   - review
   - visit
   - pre_proceedings
+  - s47_enquiry
+  - initial_cp_conference
   _inferred: true

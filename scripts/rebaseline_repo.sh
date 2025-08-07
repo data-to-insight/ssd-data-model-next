@@ -7,38 +7,38 @@
 #
 
 
-#Backup the current repository
+#Backup current repository
 git clone --mirror https://github.com/data-to-insight/ssd-data-model https://github.com/data-to-insight/ssd-data-model-backup.git
 
-#Clone the repository locally
+#Clone repo locally
 git clone https://github.com/data-to-insight/ssd-data-model
 cd ssd-data-model
 
 
-#Create a temporary branch pointing to the current HEAD
+# tmp branch pointing to current HEAD
 git checkout --orphan temp_branch
 
-# Force branch overwrite of main
+# # Force branch overwrite of main
 # git checkout feat/Extract_SQL
 # git push origin +feat/Extract_SQL:main
 
 
-#Add and commit all current Files as the new "initial commit" 
+#Add and commit all current Files as new "init commit" 
 git add -A
 git commit -am "v1.0 SSD Live"
 
 
-#delete old history, branches, and tags
+#delete old history, branches, tags
 git branch -D main  # or master or  default branch name
 git tag | xargs git tag -d  # Delete all tags
 
 
-##renames temp_branch to main (or master or whatever default branch is).
-git branch -m main  # or master or  default branch name
+##rename tmp_branch to main
+git branch -m main  
 
 
-# overwrite the remote repository with  new history-free version.
+# overwrite remote repo with new history-free version
 git push -f origin main
 
-#Push the new tags (if any)
+#Push new tags (if any)
 git push --tags

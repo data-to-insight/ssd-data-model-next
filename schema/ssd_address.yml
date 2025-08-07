@@ -174,4 +174,6 @@ nodes:
   - convictions
   - sdq
   - voice_of_child
+  - health
+  - immunisations
   _inferred: true

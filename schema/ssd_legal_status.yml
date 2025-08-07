@@ -1,3 +1,4 @@
+---
 nodes:
 - name: ssd_legal_status
   fields:
@@ -119,15 +120,3 @@ nodes:
     - liquid_logic:ssd_legal_status
     - mosaic:ssd_legal_status
     guidance: End Date of Legal Status
-  categories:
-  - looked_after
-  - care_plan
-  - placement
-  - immunisations
-  - convictions
-  - substance_misuse
-  - health
-  - visits
-  - reviews
-  - episodes
-  _inferred: true

@@ -1,3 +1,4 @@
+---
 nodes:
 - name: ssd_cla_health
   fields:
@@ -107,15 +108,3 @@ nodes:
       Refused Cancelled
 
       Completed'
-  categories:
-  - looked_after
-  - care_plan
-  - placement
-  - immunisations
-  - convictions
-  - substance_misuse
-  - health
-  - visits
-  - reviews
-  - episodes
-  _inferred: true

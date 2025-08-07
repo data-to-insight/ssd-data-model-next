@@ -324,4 +324,6 @@ nodes:
   - referral
   - visit
   - factors
+  - need
+  - contact
   _inferred: true

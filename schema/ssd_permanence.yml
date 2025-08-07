@@ -1,3 +1,4 @@
+---
 nodes:
 - name: ssd_permanence
   fields:
@@ -497,15 +498,3 @@ nodes:
     returns:
     - SSDA903
     guidance: Number of Adopters/ Prospective Adopters
-  categories:
-  - looked_after
-  - care_plan
-  - placement
-  - immunisations
-  - convictions
-  - substance_misuse
-  - health
-  - visits
-  - reviews
-  - episodes
-  _inferred: true

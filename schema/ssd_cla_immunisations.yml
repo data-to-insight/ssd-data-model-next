@@ -1,3 +1,4 @@
+---
 nodes:
 - name: ssd_cla_immunisations
   fields:
@@ -66,15 +67,3 @@ nodes:
     - liquid_logic:ssd_cla_immunisations
     - mosaic:ssd_cla_immunisations
     guidance: Immunisations status last updated
-  categories:
-  - looked_after
-  - care_plan
-  - placement
-  - immunisations
-  - convictions
-  - substance_misuse
-  - health
-  - visits
-  - reviews
-  - episodes
-  _inferred: true

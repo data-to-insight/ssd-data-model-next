@@ -1,3 +1,4 @@
+---
 nodes:
 - name: ssd_cla_convictions
   fields:
@@ -79,15 +80,3 @@ nodes:
     - liquid_logic:ssd_cla_convictions
     - mosaic:ssd_cla_convictions
     guidance: Details of offence committed.
-  categories:
-  - looked_after
-  - care_plan
-  - placement
-  - immunisations
-  - convictions
-  - substance_misuse
-  - health
-  - visits
-  - reviews
-  - episodes
-  _inferred: true

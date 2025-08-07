@@ -14,6 +14,11 @@ nav:
       - Finance: schema/erd_finance.md
       - Workforce: schema/erd_workforce.md
       - SSD Admin: schema/erd_ssd_admin.md
+  - SSD Deployment:
+      - 🟡 OLM/Eclipse: deployment/olm.md
+      - 🟢 Liquidlogic: deployment/systemc.md
+      - ⭕ Azeus: deployment/azeus.md
+      - 🟢 Mosaic: deployment/mosaic.md
 docs_dir: docs
 theme:
   name: material

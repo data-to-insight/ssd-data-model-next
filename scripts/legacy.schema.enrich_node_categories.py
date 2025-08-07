@@ -1,51 +1,23 @@
-# PYTHONPATH=. python scripts/legacy.schema.enrich_node_categories.py
-
 from pathlib import Path
 import yaml
 from collections import defaultdict
 
 SCHEMA_DIR = Path("schema")
 DOMAIN_MAP = {
-    "cla": [
-        "looked_after", "care_plan", "placement", "substance_misuse", "visits", "reviews", "episodes"
-    ],
-    "cin": [
-        "child_in_need", "assessment", "plan", "referral", "visit", "factors", "need", "contact"
-    ],
-    "cp": [
-        "child_protection", "conference", "cp_plan", "review", "visit", "pre_proceedings",
-        "s47_enquiry", "initial_cp_conference"
-    ],
-    "identity": [
-        "identity", "address", "linked_identifiers",  "immigration", "mother", "convictions", "sdq", "voice_of_child"
-    ],
-    "health": [
-        "health", "disability", "immunisations"
-    ],
-    "ehcp": [
-        "ehcp", "ehcp_request", "ehcp_assessment"
-    ],
-    "send": [
-        "send"
-    ],
-    "early_help": [
-        "early_help", "family"
-    ],
-    "care_leavers": [
-        "care_leavers", "adoption", "permanence"
-    ],
-    "finance": [
-        "finance"
-    ],
-    "workforce": [
-        "workforce"
-    ],
-    "ssd_admin": [
-        "admin"
-    ]
+    # 
+    "cla": ["looked_after", "care_plan", "placement", "substance_misuse", "visits", "reviews", "episodes"],
+    "cin": ["child_in_need", "assessment", "plan", "referral", "visit", "factors", "need", "contact"],
+    "cp": ["child_protection", "conference", "cp_plan", "review", "visit", "pre_proceedings", "s47_enquiry", "initial_cp_conference"],
+    "identity": ["identity", "address", "linked_identifiers", "immigration", "mother", "convictions", "sdq", "voice_of_child", "health", "immunisations"],
+    "health": ["disability"],
+    "ehcp": ["ehcp", "ehcp_request", "ehcp_assessment"],
+    "send": ["send"],
+    "early_help": ["early_help", "family"],
+    "care_leavers": ["care_leavers", "adoption", "permanence"],
+    "finance": ["finance"],
+    "workforce": ["workforce"],
+    "ssd_admin": ["admin"]
 }
-
-
 
 def normalise(tags):
     return [t.lower().replace("-", "_") for t in tags]
@@ -60,21 +32,28 @@ def infer_domain_from_field_tags(field_tags):
         return next(iter(domain_counts))
     return None
 
-def enrich_node_categories():
+def audit_and_enrich_node_categories():
     updated = 0
     for file in SCHEMA_DIR.glob("*.yml"):
         with open(file, "r", encoding="utf-8") as f:
             content = yaml.safe_load(f)
 
         changed = False
+        malformed_indices = []
+
         for node in content.get("nodes", []):
+            # Clean malformed field entries
+            valid_fields = []
+            for i, field in enumerate(node.get("fields", [])):
+                if isinstance(field, dict) and "name" in field:
+                    valid_fields.append(field)
+                else:
+                    malformed_indices.append((file.name, node.get("name", "?"), i))
+            node["fields"] = valid_fields
 
+            # Enrich node-level categories if missing or empty
             if "categories" in node and node["categories"]:
-                # Nodes with categories: [...] skipped
-                # Nodes with categories: [] (empty list) still candidates for enrichment.
-                # Nodes with no categories field are also candidates 
                 continue
-
 
             all_field_tags = []
             for field in node.get("fields", []):
@@ -95,7 +74,10 @@ def enrich_node_categories():
             print(f"Updated categories in: {file.name}")
             updated += 1
 
-    print(f"\nEnrichment complete. {updated} files updated.")
+        for fname, nname, idx in malformed_indices:
+            print(f"Malformed field entry removed in {fname} (node: {nname}, index: {idx})")
+
+    print(f"\nAudit & enrichment complete. {updated} files updated.")
 
 if __name__ == "__main__":
-    enrich_node_categories()
+    audit_and_enrich_node_categories()

@@ -157,31 +157,6 @@ The project is following a transparent and iterative development cycle, within t
 
 
 
-## Repo workflow
-
-In progress...
-
-### Repo running notes
-
-The Python based toolset will run within a Git Codespace. Run the setup file, as below on the command-line.   
-Set up the working environment (may prompt Y/N part-way through, type 'y'to continue):
-```bash
-./setup.sh
-```
-
-  For ref: The above bash script contains and runs <all> the following required commands so there is no further setup required. In some rare occasions, where 
-  errors in running anything to do with Pygraphviz subsequently occur, running this setup.sh script twice usually fixes the issue(s): 
-```python
-[$] pip install -r requirements.txt
-[$] sudo apt-get update
-[$] sudo apt-get install graphviz libgraphviz-dev pkg-config
-[$] pip install pygraphviz
-
-[$] pip install poetry
-```
-
-Supplied additional python tools(.py) are in a tools folder. To run them, right click on the file and select 'run in terminal' or type filename on the commandline. This will only work if the setup.sh file has been already run to install the needed dependencies. 
-
 
 
 ## Other relevant links
