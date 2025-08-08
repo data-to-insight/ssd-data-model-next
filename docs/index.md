@@ -1,3 +1,28 @@
+<!-- Project status -->
+[![Project Status: Pilot Deployment](https://img.shields.io/badge/Project%20Status-Pilot%20Deployment-orange)](#current-phase)
+
+<!-- Spec version (latest GitHub release) -->
+[![Spec Version](https://img.shields.io/github/v/release/data-to-insight/ssd-data-model-next)](https://github.com/data-to-insight/ssd-data-model-next/releases)
+
+<!-- Build status (replace build.yml with your workflow filename if different) -->
+[![Build Status](https://github.com/data-to-insight/ssd-data-model-next/actions/workflows/build.yml/badge.svg)](https://github.com/data-to-insight/ssd-data-model-next/actions/workflows/build.yml)
+
+<!-- YAML validation (replace validate_yml.yml with your workflow filename if different) -->
+[![YAML Validation](https://github.com/data-to-insight/ssd-data-model-next/actions/workflows/validate_yml.yml/badge.svg)](https://github.com/data-to-insight/ssd-data-model-next/actions/workflows/validate_yml.yml)
+
+
+<!-- Standards & formats -->
+[![YAML](https://img.shields.io/badge/data-YAML-blue)](https://yaml.org/)
+[![SQL Compatible](https://img.shields.io/badge/output-SQL-lightgrey)](https://en.wikipedia.org/wiki/SQL)
+[![CSV Schema](https://img.shields.io/badge/schema-CSV--Schema-green)](https://digital-preservation.github.io/csv-schema/)
+
+<!-- License -->
+[![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
+
+<!-- Engagement -->
+[![Feedback Form](https://img.shields.io/badge/feedback-welcome-blueviolet)](https://forms.office.com/e/UysrcGApJ1)
+[![Join Pilot](https://img.shields.io/badge/join-pilot--programme-yellowgreen)](mailto:datatoinsight.enquiries@gmail.com?subject=[GitHub]%20SSD%20Pilot%20Participation)
+
 
 # Children's Services|Social Care <br> Standard Safeguarding Dataset (SSD)
 
@@ -9,7 +34,9 @@ Current phase : [deployment](#current-phase).
 The dataset in-part aims to standardise existing local variation in how collected data is stored, thus enabling a significantly expanded collaborative set of data items and providing wider multi-regional/national level consistency, improved independent LA benchmarking and potential for identifying best practice outcomes journeys. A six-year historical data scope is proposed across the range of safeguarding activities performed by councils. Project oversight and governance via a dedicated steering group, DfE project team and volunteer LA's as part of an initial pilot and extended development group. 
 
 ## SSD Proposed Schema
-![SSD ERD](assets/images/schema_diagram.svg)
+<!-- Ensure needed is installed via mkdocs.yml to enable lightbox view -->
+[![SSD ERD](assets/images/schema_diagram.svg){ width="900" }](assets/images/schema_diagram.svg){ .glightbox }
+
 
 ## Running the SSD for/within your LA (Summarised getting started introduction)
 Any representative from your LA is welcome to get in touch directly with questions or requests for support to get started with, or run the SSD (see following subscribe/contact/volunteer details). Obviously we welcome questions/input regardless of your involvement decision etc!  
@@ -66,13 +93,13 @@ The additional explanation detail that follows is relevant to those seeking a mo
 
 
 
-### Data objects Conceptual Model
+>### Data objects Conceptual Model
 
-Defining the scope of objects/data points capturing LA Childrens Services data during the different stages of an individual's progress through the CSC system(s). Published for iterative review.
+>**This section currently in progress** Defining the scope of objects/data points capturing LA Childrens Services data during the different stages of an individual's progress through the CSC system(s). Published for iterative review. 
 
-- [TBC-data object/conceptual model](https://data-to-insight.github.io/ssd-data-model-next)
-- [TBC-data object/item-guidance model](https://data-to-insight.github.io/ssd-data-model-next/)
-- [TBC-existing data returns map](https://data-to-insight.github.io/ssd-data-model-next)
+>- [TBC-data object/conceptual model](https://data-to-insight.github.io/ssd-data-model-next)
+>- [TBC-data object/item-guidance model](https://data-to-insight.github.io/ssd-data-model-next/)
+>- [TBC-existing data returns map](https://data-to-insight.github.io/ssd-data-model-next)
 
 
 
@@ -142,11 +169,6 @@ Currently the YAML data objects, associated diagrams, documentation and website 
 
 
 
-### [Current phase](#current-phase)
-
-The project is following a transparent and iterative development cycle, within the following deployment stages. Further stakeholder [feedback](https://forms.office.com/e/UysrcGApJ1) and involvement is welcomed at any phase. LA's that wish to take part in the pilot deployment are further invited to [get in touch](mailto:datatoinsight.enquiries@gmail.com?subject=[GitHub]%Standard%Safeguarding%Dataset). 
-
-
 | Stage | Phase | Description |
 | --- | --- | --- |
 | 1 | User research | Approach outline and user research with LA's to look at how data works in relevant services, consider data gaps, challenges, and opportunities. |
@@ -157,16 +179,18 @@ The project is following a transparent and iterative development cycle, within t
 
 
 
-
-
 ## Other relevant links
 
-[yaml] : https://yaml.org/
+The SSD specification uses [YAML][yaml] as its core format, with tooling maintained in [Git][git] and data extraction output in [SQL][sql].  
+Validation is aligned with [JSON Schema][jsc] and [CSV Schema][csc] standards, and the site is built and published using [MkDocs][mkdocs] on [GitHub Pages][ghp].  
+The full specification is available on the [SSD GitHub repository][ssd-spec] (LA colleagues are welcome to request access).
+
+<!-- linked refs -->
+[yaml]: https://yaml.org/
 [git]: https://git-scm.com/
-[sql] : https://en.wikipedia.org/wiki/SQL/
+[sql]: https://en.wikipedia.org/wiki/SQL/
 [jsc]: https://json-schema.org/
 [csc]: https://digital-preservation.github.io/csv-schema/
+[mkdocs]: https://www.mkdocs.org/
 [ghp]: https://pages.github.com/
 [ssd-spec]: https://github.com/data-to-insight/ssd-data-model-next/
-
-

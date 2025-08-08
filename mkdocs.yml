@@ -19,6 +19,24 @@ nav:
       - 🟢 Liquidlogic: deployment/systemc.md
       - ⭕ Azeus: deployment/azeus.md
       - 🟢 Mosaic: deployment/mosaic.md
+  - SSD Connected: connected_development.md
+  - Contributors: CONTRIBUTORS.md
+
 docs_dir: docs
 theme:
   name: material
+
+
+plugins:
+  - search
+  - glightbox
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.superfences
+
+extra:
+  site_author: "D2I"
+  copyright: "© 2025"

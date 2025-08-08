@@ -170,10 +170,9 @@ Set up the working environment (may prompt Y/N part-way through, type 'y'to cont
 ```bash
 mkdocs build
 mkdocs serve
-mkdocs gh-deploy
+mkdocs gh-deploy 
 ```
-  For ref: The above bash script contains and runs <all> the following required commands so there is no further setup required. In some rare occasions, where 
-  errors in running anything to do with Pygraphviz subsequently occur, running this setup.sh script twice usually fixes the issue(s): 
+  For ref: The above bash script contains and runs <all> the following required commands so there is no further setup required. In some rare occasions, where errors in running anything to do with Pygraphviz subsequently occur, running this setup.sh script twice usually fixes the issue(s): 
 ```python
 [$] pip install -r requirements.txt
 [$] sudo apt-get update
