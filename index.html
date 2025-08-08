@@ -401,30 +401,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#repo-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Repo workflow
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Repo workflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#repo-running-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Repo running notes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#other-relevant-links" class="md-nav__link">
     <span class="md-ellipsis">
       Other relevant links
@@ -762,6 +738,143 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SSD Deployment
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            SSD Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deployment/olm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🟡 OLM/Eclipse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deployment/systemc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🟢 Liquidlogic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deployment/azeus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ⭕ Azeus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deployment/mosaic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🟢 Mosaic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -948,30 +1061,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#repo-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Repo workflow
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Repo workflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#repo-running-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Repo running notes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#other-relevant-links" class="md-nav__link">
     <span class="md-ellipsis">
       Other relevant links
@@ -1132,23 +1221,6 @@ type, description, which cms systems the data item/field is available on and any
 </tr>
 </tbody>
 </table>
-<h2 id="repo-workflow">Repo workflow</h2>
-<p>In progress...</p>
-<h3 id="repo-running-notes">Repo running notes</h3>
-<p>The Python based toolset will run within a Git Codespace. Run the setup file, as below on the command-line. <br />
-Set up the working environment (may prompt Y/N part-way through, type 'y'to continue):</p>
-<pre><code class="language-bash">./setup.sh
-</code></pre>
-<p>For ref: The above bash script contains and runs <all> the following required commands so there is no further setup required. In some rare occasions, where 
-  errors in running anything to do with Pygraphviz subsequently occur, running this setup.sh script twice usually fixes the issue(s): </p>
-<pre><code class="language-python">[$] pip install -r requirements.txt
-[$] sudo apt-get update
-[$] sudo apt-get install graphviz libgraphviz-dev pkg-config
-[$] pip install pygraphviz
-
-[$] pip install poetry
-</code></pre>
-<p>Supplied additional python tools(.py) are in a tools folder. To run them, right click on the file and select 'run in terminal' or type filename on the commandline. This will only work if the setup.sh file has been already run to install the needed dependencies. </p>
 <h2 id="other-relevant-links">Other relevant links</h2>
 <p>[yaml] : https://yaml.org/</p>
 <p>[sql] : https://en.wikipedia.org/wiki/SQL/</p>
