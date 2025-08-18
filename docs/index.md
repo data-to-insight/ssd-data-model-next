@@ -1,16 +1,6 @@
 <!-- Project status -->
 [![Project Status: Pilot Deployment](https://img.shields.io/badge/Project%20Status-Pilot%20Deployment-orange)](#current-phase)
 
-<!-- Spec version (latest GitHub release) -->
-[![Spec Version](https://img.shields.io/github/v/release/data-to-insight/ssd-data-model-next)](https://github.com/data-to-insight/ssd-data-model-next/releases)
-
-<!-- Build status (replace build.yml with your workflow filename if different) -->
-[![Build Status](https://github.com/data-to-insight/ssd-data-model-next/actions/workflows/build.yml/badge.svg)](https://github.com/data-to-insight/ssd-data-model-next/actions/workflows/build.yml)
-
-<!-- YAML validation (replace validate_yml.yml with your workflow filename if different) -->
-[![YAML Validation](https://github.com/data-to-insight/ssd-data-model-next/actions/workflows/validate_yml.yml/badge.svg)](https://github.com/data-to-insight/ssd-data-model-next/actions/workflows/validate_yml.yml)
-
-
 <!-- Standards & formats -->
 [![YAML](https://img.shields.io/badge/data-YAML-blue)](https://yaml.org/)
 [![SQL Compatible](https://img.shields.io/badge/output-SQL-lightgrey)](https://en.wikipedia.org/wiki/SQL)
@@ -18,15 +8,17 @@
 
 <!-- License -->
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
-
-<!-- Engagement -->
 [![Feedback Form](https://img.shields.io/badge/feedback-welcome-blueviolet)](https://forms.office.com/e/UysrcGApJ1)
 [![Join Pilot](https://img.shields.io/badge/join-pilot--programme-yellowgreen)](mailto:datatoinsight.enquiries@gmail.com?subject=[GitHub]%20SSD%20Pilot%20Participation)
-
+[![Spec Version](https://img.shields.io/github/v/release/data-to-insight/ssd-data-model-next)](https://github.com/data-to-insight/ssd-data-model-next/releases)
 
 # Children's Services|Social Care <br> Standard Safeguarding Dataset (SSD)
 
-This is the source repository for the Standard CSC Dataset for Local Authorities (Project 1a DDSF). A standardised dataset for Children's Social Care (CSC) in safeguarding authorities. Enabling increased scope for bespoke local analysis using sector-driven national level data _(Ref: Project Stage 1)_; combined with a suite of methods/tools that all local authorities can adopt at near-zero running cost to independently produce the standardised dataset _(Ref: Project Stage 2)_. Current variation in local data caputure and storage limits data collaboration between LAs to standard ‘core’ datasets – most notably the Children in Need (CIN) Census and SSDA903, for children in need and looked after children respectively – and Ofsted’s “Annex A” specification of child-level data. These datasets often lack the depth and granularity that some individual LAs incorporate in bespoke local analysis, including to understand quality of practice and improved outcomes for vunerable children. 
+Source repository for the Standard CSC Dataset for Local Authorities (Project 1a DDSF). 
+
+>This is the **Phase 2** source repository for the Standard CSC Dataset. [The **Phase 1** repo and front-end](https://data-to-insight.github.io/ssd-data-model/) continues to be maintained and updated as a more comprehensive legacy view during the ongoing port to this revised and improved phase 2 rebuild. 
+
+A standardised dataset for Children's Social Care (CSC) in safeguarding authorities. Enabling increased scope for bespoke local analysis using sector-driven national level data _(Ref: Project Stage 1)_; combined with a suite of methods/tools that all local authorities can adopt at near-zero running cost to independently produce the standardised dataset _(Ref: Project Stage 2)_. Current variation in local data caputure and storage limits data collaboration between LAs to standard ‘core’ datasets – most notably the Children in Need (CIN) Census and SSDA903, for children in need and looked after children respectively – and Ofsted’s “Annex A” specification of child-level data. These datasets often lack the depth and granularity that some individual LAs incorporate in bespoke local analysis, including to understand quality of practice and improved outcomes for vunerable children. 
 Current phase : [deployment](#current-phase). 
 
 ## Initial core of the SSD
