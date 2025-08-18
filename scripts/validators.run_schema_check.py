@@ -4,6 +4,7 @@
 
 from pathlib import Path
 import yaml
+#from scripts.schema_model import NodeFile, RelationshipFile
 from schema_model import NodeFile, RelationshipFile
 from pydantic import ValidationError
 
@@ -21,9 +22,9 @@ def validate_all_yml(path: Path):
             else:
                 NodeFile.model_validate(raw)
 
-            print(f"✅ Valid: {yml_file.name}")
+            print(f"Valid: {yml_file.name}")
         except ValidationError as ve:
-            print(f"❌ Validation error in {yml_file.name}")
+            print(f"Validation error in {yml_file.name}")
             errors.append((yml_file.name, ve))
         except Exception as e:
             print(f"General error in {yml_file.name}: {e}")

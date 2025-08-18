@@ -20,6 +20,6 @@ for file in SCHEMA_DIR.glob("*.yml"):
             for cat in field.get("categories", []):
                 all_categories.add(cat.lower().replace("-", "_"))
 
-print("✅ Unique category values found:\n")
+print("Unique category values found:\n")
 for cat in sorted(all_categories):
     print(f"- {cat}")
