@@ -1,7 +1,6 @@
 # Contributors  
 
-We appreciate the efforts of all individuals and organisations who have contributed to the SSD project.  
-Whether through steering, testing, development, or research, your work has been essential to the success of this project so far, and the onward development work.  
+We appreciate the efforts of all individuals and organisations who have contributed to the SSD project. Through the steering group, testing, development and research; your work has been essential to the success of this project so far, and the onward development work.  
 
 ---
 
@@ -9,11 +8,11 @@ Whether through steering, testing, development, or research, your work has been 
 
 We are particularly grateful to our **Steering Group**, made up of colleagues from:  
 
-- **Data to Insight** (hosted by East Sussex County Council)  
 - **Essex County Council**  
 - **Hertfordshire County Council**  
 - **Knowsley Council**  
 - **North-West Association of Directors of Children’s Services**  
+- Data to Insight (hosted by **East Sussex County Council**)  
 
 ---
 
@@ -38,7 +37,6 @@ We are grateful to the following partner organisations for their key contributio
 - **Association of Directors of Children’s Services**  
 - **Coram Voice**  
 - **Department for Education**  
-- **Ofsted**  
 - **University of Sussex**  
 
 ---
@@ -49,25 +47,28 @@ In no particular order:
 
 | Contributor | Contribution |
 |---|---|
-| **Phil Weir** | Early project champion, SQL development in Mosaic and the AA return |
+| **Phil Weir** | Early project champion, SQL development in Mosaic and the AA return scripts |
 | **Sam Fergerson** | Mosaic development (T-SQL & Oracle) |
 | **Keith Thomas** | Mosaic development (T-SQL & Oracle) |
 | **Lee Hallsworth** | Eclipse development (Postgres) |
+| **Nady Cash** | Eclipse development (Postgres) |
 | **Kate Jagger** | Championing involvement for Azeus users |
 | **Esther Thompson** | Azeus guidance and development |
-
+| **Humaira Farhan** | Azeus development |
+| **Tony Bateman** | Azeus development |
+| **Sam Yeates** | Early SystemC/LL testing |
 ---
 
 ## Special Thanks  
 
-- **Knowsley County Council** — For providing the project's first testing access, enabling rapid early cross-LA development and testing  
+- **Knowsley County Council** — John for providing the project's first testing access, enabling rapid early *cross-LA development and testing* - this was our first key proving ground and milestone.  
 
 ---
 
 ## How to Contribute  
 
 We welcome further contributions to the SSD.  
-If you'd like to get involved, please contact us for details on how to participate.  
+If you'd like to get involved, please contact us for details on how to participate and enable your LA.   
 
 ---
 
