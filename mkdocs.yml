@@ -14,6 +14,7 @@ nav:
       - Finance: schema/erd_finance.md
       - Workforce: schema/erd_workforce.md
       - SSD Admin: schema/erd_ssd_admin.md
+      - DfE API Pilot: schema/erd_dfe_private_dashboard.md
   - SSD Deployment:
       - 🟡 OLM/Eclipse: deployment/olm.md
       - 🟢 Liquidlogic: deployment/systemc.md

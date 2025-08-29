@@ -15,6 +15,7 @@ nodes:
     categories:
     - identity
     - disability
+    - dfe_private_dashboard
     returns:
     - Local
     cms:

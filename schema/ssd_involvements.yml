@@ -23,6 +23,7 @@ nodes:
     foreign_key: ssd_professionals.prof_professional_id
     categories:
     - workforce
+    - dfe_private_dashboard
     returns:
     - Local
     cms:

@@ -8,6 +8,7 @@ nodes:
     type: nvarchar
     categories:
     - admin
+    - dfe_private_dashboard
     constraints:
     - pk
     cms:

@@ -9,6 +9,7 @@ nodes:
     categories:
     - child_in_need
     - assessment
+    - dfe_private_dashboard
     returns:
     - Local
     cms_field:

@@ -14,6 +14,7 @@ nodes:
     categories:
     - looked_after
     - placement
+    - dfe_private_dashboard
     returns:
     - Local
     cms:

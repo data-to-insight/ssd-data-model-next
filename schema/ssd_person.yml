@@ -13,6 +13,7 @@ nodes:
         enabled: true
     categories:
     - identity
+    - dfe_private_dashboard
     returns:
     - SSDA903
     - CIN

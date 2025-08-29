@@ -27,7 +27,8 @@ DOMAIN_MAP = {
     "care_leavers": ["care_leavers", "adoption", "permanence"],
     "finance": ["finance"],
     "workforce": ["workforce"],
-    "ssd_admin": ["admin"]
+    "ssd_admin": ["admin"],
+    "dfe_private_dashboard": ["dfe_private_dashboard"]    
 }
 def normalise_tags(raw_tags):
     return [t.strip().lower().replace("-", "_") for t in raw_tags]

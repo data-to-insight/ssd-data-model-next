@@ -13,6 +13,7 @@ nodes:
         enabled: true
     categories:
     - care_leavers
+    - dfe_private_dashboard
     returns:
     - Local
     cms:

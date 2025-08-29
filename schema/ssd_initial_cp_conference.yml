@@ -9,6 +9,7 @@ nodes:
     categories:
     - initial_cp_conference
     - child_protection
+    - dfe_private_dashboard
     returns:
     - Local
     cms_table:

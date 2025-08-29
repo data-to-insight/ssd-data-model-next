@@ -8,6 +8,7 @@ nodes:
     primary_key: true
     categories:
     - linked_identifiers
+    - dfe_private_dashboard
     returns:
     - 1aNotInCMS
     cms:

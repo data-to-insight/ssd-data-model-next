@@ -50,7 +50,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -720,6 +729,50 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connected_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSD Connected
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -772,10 +825,33 @@
 
 
 <h1 id="ssd_admin-erd">SSD_ADMIN ERD</h1>
-<p><img alt="SSD_ADMIN ERD" src="../../assets/images/erd_ssd_admin.svg" /></p>
+<p><a class="glightbox" href="../../assets/images/erd_ssd_admin.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="SSD_ADMIN ERD" src="../../assets/images/erd_ssd_admin.svg" /></a></p>
 <p><a href="../../assets/images/erd_ssd_admin.svg">View full image</a>  |  <a href="../../assets/images/erd_ssd_admin.svg">Download SVG</a>  |  <a href="../../dot/erd_ssd_admin.dot">Download DOT file</a></p>
 <h2 id="table-field-previews">Table Field Previews</h2>
-<p><strong>Tables in domain:</strong> 1</p>
+<p><strong>Tables in domain:</strong> 2</p>
+<details>
+<summary><strong>ssd_api_data_staging</strong></summary>
+
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td>nvarchar</td><td></td></tr>
+<tr><td>person_id</td><td>nvarchar</td><td></td></tr>
+<tr><td>json_payload</td><td>nvarchar</td><td></td></tr>
+<tr><td>current_hash</td><td>BINARY</td><td></td></tr>
+<tr><td>previous_hash</td><td>BINARY</td><td></td></tr>
+<tr><td>submission_status</td><td>nvarchar</td><td></td></tr>
+<tr><td>submission_timestamp</td><td>datetime</td><td></td></tr>
+<tr><td>api_response</td><td>nvarchar</td><td></td></tr>
+<tr><td>row_state</td><td>nvarchar</td><td></td></tr>
+<tr><td>last_updated</td><td>datetime</td><td></td></tr>
+</tbody>
+</table>
+
+</details>
+
 <details>
 <summary><strong>ssd_version_log</strong></summary>
 
@@ -849,5 +925,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

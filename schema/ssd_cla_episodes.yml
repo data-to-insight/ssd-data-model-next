@@ -13,6 +13,7 @@ nodes:
         enabled: true
     categories:
     - looked_after
+    - dfe_private_dashboard
     returns:
     - RIIA
     cms:

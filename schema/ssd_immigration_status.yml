@@ -13,6 +13,7 @@ nodes:
     - identity
     - immigration
     - uasc
+    - dfe_private_dashboard
     returns:
     - Local
     cms:

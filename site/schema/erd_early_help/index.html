@@ -50,7 +50,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -720,6 +729,50 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connected_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSD Connected
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -772,7 +825,7 @@
 
 
 <h1 id="early_help-erd">EARLY_HELP ERD</h1>
-<p><img alt="EARLY_HELP ERD" src="../../assets/images/erd_early_help.svg" /></p>
+<p><a class="glightbox" href="../../assets/images/erd_early_help.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="EARLY_HELP ERD" src="../../assets/images/erd_early_help.svg" /></a></p>
 <p><a href="../../assets/images/erd_early_help.svg">View full image</a>  |  <a href="../../assets/images/erd_early_help.svg">Download SVG</a>  |  <a href="../../dot/erd_early_help.dot">Download DOT file</a></p>
 <h2 id="table-field-previews">Table Field Previews</h2>
 <p><strong>Tables in domain:</strong> 2</p>
@@ -866,5 +919,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -1,4 +1,5 @@
 digraph G {
   node [shape=record];
   ssd_version_log [label="{ssd_version_log|version_number\lrelease_date\ldescription\lis_current\lcreated_at\lcreated_by\limpact_description\l}"];
+  ssd_api_data_staging [label="{ssd_api_data_staging|id\lperson_id\ljson_payload\lcurrent_hash\lprevious_hash\lsubmission_status\lsubmission_timestamp\lapi_response\lrow_state\llast_updated\l}"];
 }

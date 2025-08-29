@@ -14,6 +14,7 @@ nodes:
     categories:
     - child_in_need
     - cin_plan
+    - dfe_private_dashboard
     returns:
     - RIIA
     cms:

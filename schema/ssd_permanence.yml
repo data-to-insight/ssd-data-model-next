@@ -14,6 +14,7 @@ nodes:
     - looked_after
     - permanence
     - adoption
+    - dfe_private_dashboard
     returns:
     - Local
     cms:

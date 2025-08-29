@@ -13,8 +13,10 @@ IMAGE_EXT = os.getenv("ERD_IMAGE_TYPE", "svg")  # "svg" or "png"
 DOCS_DIR = Path("docs")
 
 # becomes the .md pages, needs to align with mkdocs.yml nav
-DOMAINS = ["cla", "cin", "cp","identity", "health", "ehcp", "send","early_help", "care_leavers", "finance", "workforce", "ssd_admin"]
+# .md page will only be created IF associated domain exists in this list
+DOMAINS = ["cla", "cin", "cp","identity", "health", "ehcp", "send","early_help", "care_leavers", "finance", "workforce", "ssd_admin", "dfe_private_dashboard"]
 
+# each domain has 1:n associated ssd objects that will then display on it's page to map that sub-schema
 DOMAIN_MAP = {
     "cla": ["looked_after", "care_plan", "placement", "substance_misuse", "visits", "reviews", "episodes"],
     "cin": ["child_in_need", "assessment", "plan", "referral", "visit", "factors", "need", "contact"],
@@ -27,7 +29,8 @@ DOMAIN_MAP = {
     "care_leavers": ["care_leavers", "adoption", "permanence"],
     "finance": ["finance"],
     "workforce": ["workforce"],
-    "ssd_admin": ["admin"]
+    "ssd_admin": ["admin"],
+    "dfe_private_dashboard": ["dfe_private_dashboard"]    
 }
 
 

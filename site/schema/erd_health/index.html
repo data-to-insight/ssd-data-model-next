@@ -50,7 +50,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -720,6 +729,50 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connected_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSD Connected
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -772,65 +825,25 @@
 
 
 <h1 id="health-erd">HEALTH ERD</h1>
-<p><img alt="HEALTH ERD" src="../../assets/images/erd_health.svg" /></p>
+<p><a class="glightbox" href="../../assets/images/erd_health.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HEALTH ERD" src="../../assets/images/erd_health.svg" /></a></p>
 <p><a href="../../assets/images/erd_health.svg">View full image</a>  |  <a href="../../assets/images/erd_health.svg">Download SVG</a>  |  <a href="../../dot/erd_health.dot">Download DOT file</a></p>
 <h2 id="table-field-previews">Table Field Previews</h2>
-<p><strong>Tables in domain:</strong> 14</p>
+<p><strong>Tables in domain:</strong> 9</p>
 <details>
-<summary><strong>ssd_cla_care_plan</strong></summary>
+<summary><strong>ssd_address</strong></summary>
 
 <table>
 <thead>
 <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
 </thead>
 <tbody>
-<tr><td>lacp_table_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>lacp_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cla_episodes">ssd_cla_episodes</a></td></tr>
-<tr><td>lacp_cla_care_plan_start_date</td><td>datetime</td><td></td></tr>
-<tr><td>lacp_cla_care_plan_end_date</td><td>datetime</td><td></td></tr>
-<tr><td>lacp_cla_care_plan_json</td><td>nvarchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cla_convictions</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>clac_cla_conviction_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>clac_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cla_episodes">ssd_cla_episodes</a></td></tr>
-<tr><td>clac_cla_conviction_date</td><td>datetime</td><td></td></tr>
-<tr><td>clac_cla_conviction_offence</td><td>nvarchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cla_episodes</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>clae_cla_episode_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>clae_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>clae_cla_episode_start_date</td><td>datetime</td><td></td></tr>
-<tr><td>clae_cla_episode_start_reason</td><td>nvarchar</td><td></td></tr>
-<tr><td>clae_cla_primary_need_code</td><td>nvarchar</td><td></td></tr>
-<tr><td>clae_cla_episode_ceased_date</td><td>datetime</td><td></td></tr>
-<tr><td>clae_cla_episode_ceased_reason</td><td>nvarchar</td><td></td></tr>
-<tr><td>clae_cla_id</td><td>nvarchar</td><td></td></tr>
-<tr><td>clae_referral_id</td><td>nvarchar</td><td></td></tr>
-<tr><td>clae_cla_placement_id</td><td>nvarchar</td><td>FK → ssd_cla_placements</td></tr>
-<tr><td>clae_entered_care_date</td><td>datetime</td><td></td></tr>
-<tr><td>clae_cla_last_iro_contact_date</td><td>datetime</td><td></td></tr>
+<tr><td>addr_table_id</td><td>nvarchar</td><td>PK</td></tr>
+<tr><td>addr_address_json</td><td>nvarchar</td><td></td></tr>
+<tr><td>addr_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_person">ssd_person</a></td></tr>
+<tr><td>addr_address_type</td><td>nvarchar</td><td></td></tr>
+<tr><td>addr_address_start_date</td><td>datetime</td><td></td></tr>
+<tr><td>addr_address_end_date</td><td>datetime</td><td></td></tr>
+<tr><td>addr_address_postcode</td><td>nvarchar</td><td></td></tr>
 </tbody>
 </table>
 
@@ -845,7 +858,7 @@
 </thead>
 <tbody>
 <tr><td>clah_health_check_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>clah_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cla_episodes">ssd_cla_episodes</a></td></tr>
+<tr><td>clah_person_id</td><td>nvarchar</td><td>FK → ssd_cla_episodes</td></tr>
 <tr><td>clah_health_check_type</td><td>nvarchar</td><td></td></tr>
 <tr><td>clah_health_check_date</td><td>datetime</td><td></td></tr>
 <tr><td>clah_health_check_status</td><td>nvarchar</td><td></td></tr>
@@ -862,51 +875,9 @@
 <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
 </thead>
 <tbody>
-<tr><td>clai_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cla_episodes">ssd_cla_episodes</a></td></tr>
+<tr><td>clai_person_id</td><td>nvarchar</td><td>FK → ssd_cla_episodes</td></tr>
 <tr><td>clai_immunisations_status</td><td>nchar</td><td></td></tr>
 <tr><td>clai_immunisations_status_date</td><td>datetime</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cla_placement</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>clap_cla_placement_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>clap_cla_placement_start_date</td><td>datetime</td><td></td></tr>
-<tr><td>clap_cla_placement_type</td><td>nvarchar</td><td></td></tr>
-<tr><td>clap_cla_placement_urn</td><td>nvarchar</td><td></td></tr>
-<tr><td>clap_cla_placement_distance</td><td>float</td><td></td></tr>
-<tr><td>clap_cla_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cla_episodes">ssd_cla_episodes</a></td></tr>
-<tr><td>clap_cla_placement_provider</td><td>nvarchar</td><td></td></tr>
-<tr><td>clap_cla_placement_postcode</td><td>nvarchar</td><td></td></tr>
-<tr><td>clap_cla_placement_end_date</td><td>datetime</td><td></td></tr>
-<tr><td>clap_cla_placement_change_reason</td><td>nvarchar</td><td></td></tr>
-<tr><td>clap_person_id</td><td>nvarchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_cla_previous_permanence</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>lapp_table_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>lapp_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cla_episodes">ssd_cla_episodes</a></td></tr>
-<tr><td>lapp_previous_permanence_order_date</td><td>nvarchar</td><td></td></tr>
-<tr><td>lapp_previous_permanence_option</td><td>nvarchar</td><td></td></tr>
-<tr><td>lapp_previous_permanence_la</td><td>nvarchar</td><td></td></tr>
 </tbody>
 </table>
 
@@ -921,7 +892,7 @@
 </thead>
 <tbody>
 <tr><td>clas_substance_misuse_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>clas_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cla_episodes">ssd_cla_episodes</a></td></tr>
+<tr><td>clas_person_id</td><td>nvarchar</td><td>FK → ssd_cla_episodes</td></tr>
 <tr><td>clas_substance_misuse_date</td><td>datetime</td><td></td></tr>
 <tr><td>clas_substance_misused</td><td>nchar</td><td></td></tr>
 <tr><td>clas_intervention_received</td><td>nchar</td><td></td></tr>
@@ -938,7 +909,7 @@
 <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
 </thead>
 <tbody>
-<tr><td>disa_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
+<tr><td>disa_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_person">ssd_person</a></td></tr>
 <tr><td>disa_table_id</td><td>nvarchar</td><td>PK</td></tr>
 <tr><td>disa_disability_code</td><td>nvarchar</td><td></td></tr>
 </tbody>
@@ -947,109 +918,83 @@
 </details>
 
 <details>
-<summary><strong>ssd_legal_status</strong></summary>
+<summary><strong>ssd_immigration_status</strong></summary>
 
 <table>
 <thead>
 <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
 </thead>
 <tbody>
-<tr><td>lega_legal_status_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>lega_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>lega_legal_status</td><td>nvarchar</td><td></td></tr>
-<tr><td>lega_legal_status_start_date</td><td>datetime</td><td></td></tr>
-<tr><td>lega_legal_status_end_date</td><td>datetime</td><td></td></tr>
+<tr><td>immi_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_person">ssd_person</a></td></tr>
+<tr><td>immi_immigration_status_id</td><td>nvarchar</td><td>PK</td></tr>
+<tr><td>immi_immigration_status</td><td>nvarchar</td><td></td></tr>
+<tr><td>immi_immigration_status_start_date</td><td>datetime</td><td></td></tr>
+<tr><td>immi_immigration_status_end_date</td><td>datetime</td><td></td></tr>
 </tbody>
 </table>
 
 </details>
 
 <details>
-<summary><strong>ssd_missing</strong></summary>
+<summary><strong>ssd_linked_identifiers</strong></summary>
 
 <table>
 <thead>
 <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
 </thead>
 <tbody>
-<tr><td>miss_table_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>miss_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>miss_missing_episode_start_date</td><td>datetime</td><td></td></tr>
-<tr><td>miss_missing_episode_type</td><td>nvarchar</td><td></td></tr>
-<tr><td>miss_missing_episode_end_date</td><td>datetime</td><td></td></tr>
-<tr><td>miss_missing_rhi_offered</td><td>nvarchar</td><td></td></tr>
-<tr><td>miss_missing_rhi_accepted</td><td>nvarchar</td><td></td></tr>
+<tr><td>link_table_id</td><td>nvarchar</td><td>PK</td></tr>
+<tr><td>link_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_person">ssd_person</a></td></tr>
+<tr><td>link_identifier_type</td><td>nvarchar</td><td></td></tr>
+<tr><td>link_identifier_value</td><td>nvarchar</td><td></td></tr>
+<tr><td>link_valid_from_date</td><td>datetime</td><td></td></tr>
+<tr><td>link_valid_to_date</td><td>datetime</td><td></td></tr>
 </tbody>
 </table>
 
 </details>
 
 <details>
-<summary><strong>ssd_mother</strong></summary>
+<summary><strong>ssd_person</strong></summary>
 
 <table>
 <thead>
 <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
 </thead>
 <tbody>
-<tr><td>moth_table_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>moth_person_id</td><td>nvarchar</td><td>FK → ssd_person</td></tr>
-<tr><td>moth_childs_person_id</td><td>nvarchar</td><td>PK; FK → ssd_person</td></tr>
-<tr><td>moth_childs_dob</td><td>datetime</td><td></td></tr>
+<tr><td>pers_person_id</td><td>nvarchar</td><td>PK</td></tr>
+<tr><td>pers_sex</td><td>nvarchar</td><td></td></tr>
+<tr><td>pers_gender</td><td>nvarchar</td><td></td></tr>
+<tr><td>pers_ethnicity</td><td>nvarchar</td><td></td></tr>
+<tr><td>pers_dob</td><td>datetime</td><td></td></tr>
+<tr><td>pers_common_child_id</td><td>nvarchar</td><td></td></tr>
+<tr><td>pers_legacy_id</td><td>nvarchar</td><td></td></tr>
+<tr><td>pers_upn_unknown</td><td>nvarchar</td><td></td></tr>
+<tr><td>pers_send_flag</td><td>nchar</td><td></td></tr>
+<tr><td>pers_expected_dob</td><td>datetime</td><td></td></tr>
+<tr><td>pers_death_date</td><td>datetime</td><td></td></tr>
+<tr><td>pers_is_mother</td><td>nchar</td><td></td></tr>
+<tr><td>pers_nationality</td><td>nvarchar</td><td></td></tr>
 </tbody>
 </table>
 
 </details>
 
 <details>
-<summary><strong>ssd_permanence</strong></summary>
+<summary><strong>ssd_voice_of_child</strong></summary>
 
 <table>
 <thead>
 <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
 </thead>
 <tbody>
-<tr><td>perm_table_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>perm_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cla_episodes">ssd_cla_episodes</a></td></tr>
-<tr><td>perm_cla_id</td><td>nvarchar</td><td></td></tr>
-<tr><td>perm_adm_decision_date</td><td>datetime</td><td></td></tr>
-<tr><td>perm_ffa_cp_decision_date</td><td>datetime</td><td></td></tr>
-<tr><td>perm_placement_order_date</td><td>datetime</td><td></td></tr>
-<tr><td>perm_placed_for_adoption_date</td><td>datetime</td><td></td></tr>
-<tr><td>perm_matched_date</td><td>datetime</td><td></td></tr>
-<tr><td>perm_adopted_by_carer_flag</td><td>nchar</td><td></td></tr>
-<tr><td>perm_placed_ffa_cp_date</td><td>datetime</td><td></td></tr>
-<tr><td>perm_decision_reversed_date</td><td>datetime</td><td></td></tr>
-<tr><td>perm_placed_foster_carer_date</td><td>datetime</td><td></td></tr>
-<tr><td>perm_part_of_sibling_group</td><td>nchar</td><td></td></tr>
-<tr><td>perm_siblings_placed_together</td><td>int</td><td></td></tr>
-<tr><td>perm_siblings_placed_apart</td><td>int</td><td></td></tr>
-<tr><td>perm_placement_provider_urn</td><td>nvarchar</td><td></td></tr>
-<tr><td>perm_decision_reversed_reason</td><td>nvarchar</td><td></td></tr>
-<tr><td>perm_permanence_order_date</td><td>datetime</td><td></td></tr>
-<tr><td>perm_permanence_order_type</td><td>nvarchar</td><td></td></tr>
-<tr><td>perm_adoption_worker_id</td><td>nvarchar</td><td>FK → ssd_professionals</td></tr>
-<tr><td>perm_adopter_sex</td><td>nvarchar</td><td></td></tr>
-<tr><td>perm_adopter_legal_status</td><td>nvarchar</td><td></td></tr>
-<tr><td>perm_number_of_adopters</td><td>nvarchar</td><td></td></tr>
-</tbody>
-</table>
-
-</details>
-
-<details>
-<summary><strong>ssd_sdq_scores</strong></summary>
-
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td>csdq_table_id</td><td>nvarchar</td><td>PK</td></tr>
-<tr><td>csdq_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_cla_episodes">ssd_cla_episodes</a></td></tr>
-<tr><td>csdq_sdq_completed_date</td><td>datetime</td><td></td></tr>
-<tr><td>csdq_sdq_reason</td><td>nvarchar</td><td></td></tr>
-<tr><td>csdq_sdq_score</td><td>nvarchar</td><td></td></tr>
+<tr><td>voch_table_id</td><td>nvarchar</td><td>PK</td></tr>
+<tr><td>voch_person_id</td><td>nvarchar</td><td>FK → <a href="#ssd_person">ssd_person</a></td></tr>
+<tr><td>voch_explained_worries</td><td>nchar</td><td></td></tr>
+<tr><td>voch_story_help_understand</td><td>nchar</td><td></td></tr>
+<tr><td>voch_agree_worker</td><td>nchar</td><td></td></tr>
+<tr><td>voch_plan_safe</td><td>nchar</td><td></td></tr>
+<tr><td>voch_tablet_help_explain</td><td>nchar</td><td></td></tr>
 </tbody>
 </table>
 
@@ -1108,5 +1053,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

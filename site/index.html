@@ -48,7 +48,16 @@
     
     
     
-  </head>
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -381,15 +390,6 @@
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       Output
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#current-phase" class="md-nav__link">
-    <span class="md-ellipsis">
-      Current phase
     </span>
   </a>
   
@@ -875,6 +875,50 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="connected_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSD Connected
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1046,15 +1090,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#current-phase" class="md-nav__link">
-    <span class="md-ellipsis">
-      Current phase
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1085,13 +1120,29 @@
 
 
 
+<!-- Project status -->
+<p><a href="#current-phase"><img alt="Project Status: Pilot Deployment" src="https://img.shields.io/badge/Project%20Status-Pilot%20Deployment-orange" /></a></p>
+<!-- Standards & formats -->
+<p><a href="https://yaml.org/"><img alt="YAML" src="https://img.shields.io/badge/data-YAML-blue" /></a>
+<a href="https://en.wikipedia.org/wiki/SQL"><img alt="SQL Compatible" src="https://img.shields.io/badge/output-SQL-lightgrey" /></a>
+<a href="https://digital-preservation.github.io/csv-schema/"><img alt="CSV Schema" src="https://img.shields.io/badge/schema-CSV--Schema-green" /></a></p>
+<!-- License -->
+<p><a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-brightgreen" /></a>
+<a href="https://forms.office.com/e/UysrcGApJ1"><img alt="Feedback Form" src="https://img.shields.io/badge/feedback-welcome-blueviolet" /></a>
+<a href="mailto:datatoinsight.enquiries@gmail.com?subject=[GitHub]%20SSD%20Pilot%20Participation"><img alt="Join Pilot" src="https://img.shields.io/badge/join-pilot--programme-yellowgreen" /></a>
+<a href="https://github.com/data-to-insight/ssd-data-model-next/releases"><img alt="Spec Version" src="https://img.shields.io/github/v/release/data-to-insight/ssd-data-model-next" /></a></p>
 <h1 id="childrens-servicessocial-care-standard-safeguarding-dataset-ssd">Children's Services|Social Care <br> Standard Safeguarding Dataset (SSD)</h1>
-<p>This is the source repository for the Standard CSC Dataset for Local Authorities (Project 1a DDSF). A standardised dataset for Children's Social Care (CSC) in safeguarding authorities. Enabling increased scope for bespoke local analysis using sector-driven national level data <em>(Ref: Project Stage 1)</em>; combined with a suite of methods/tools that all local authorities can adopt at near-zero running cost to independently produce the standardised dataset <em>(Ref: Project Stage 2)</em>. Current variation in local data caputure and storage limits data collaboration between LAs to standard ‘core’ datasets – most notably the Children in Need (CIN) Census and SSDA903, for children in need and looked after children respectively – and Ofsted’s “Annex A” specification of child-level data. These datasets often lack the depth and granularity that some individual LAs incorporate in bespoke local analysis, including to understand quality of practice and improved outcomes for vunerable children. 
+<p>Source repository for the Standard CSC Dataset for Local Authorities (Project 1a DDSF). </p>
+<blockquote>
+<p>This is the <strong>Phase 2</strong> source repository for the Standard CSC Dataset. <a href="https://data-to-insight.github.io/ssd-data-model/">The <strong>Phase 1</strong> repo and front-end</a> continues to be maintained and updated as a more comprehensive legacy view during the ongoing port to this revised and improved phase 2 rebuild. </p>
+</blockquote>
+<p>A standardised dataset for Children's Social Care (CSC) in safeguarding authorities. Enabling increased scope for bespoke local analysis using sector-driven national level data <em>(Ref: Project Stage 1)</em>; combined with a suite of methods/tools that all local authorities can adopt at near-zero running cost to independently produce the standardised dataset <em>(Ref: Project Stage 2)</em>. Current variation in local data caputure and storage limits data collaboration between LAs to standard ‘core’ datasets – most notably the Children in Need (CIN) Census and SSDA903, for children in need and looked after children respectively – and Ofsted’s “Annex A” specification of child-level data. These datasets often lack the depth and granularity that some individual LAs incorporate in bespoke local analysis, including to understand quality of practice and improved outcomes for vunerable children. 
 Current phase : <a href="#current-phase">deployment</a>. </p>
 <h2 id="initial-core-of-the-ssd">Initial core of the SSD</h2>
 <p>The dataset in-part aims to standardise existing local variation in how collected data is stored, thus enabling a significantly expanded collaborative set of data items and providing wider multi-regional/national level consistency, improved independent LA benchmarking and potential for identifying best practice outcomes journeys. A six-year historical data scope is proposed across the range of safeguarding activities performed by councils. Project oversight and governance via a dedicated steering group, DfE project team and volunteer LA's as part of an initial pilot and extended development group. </p>
 <h2 id="ssd-proposed-schema">SSD Proposed Schema</h2>
-<p><img alt="SSD ERD" src="assets/images/schema_diagram.svg" /></p>
+<!-- Ensure needed is installed via mkdocs.yml to enable lightbox view -->
+<p><a class="glightbox" href="assets/images/schema_diagram.svg"><img alt="SSD ERD" src="assets/images/schema_diagram.svg" width="900" /></a></p>
 <h2 id="running-the-ssd-forwithin-your-la-summarised-getting-started-introduction">Running the SSD for/within your LA (Summarised getting started introduction)</h2>
 <p>Any representative from your LA is welcome to get in touch directly with questions or requests for support to get started with, or run the SSD (see following subscribe/contact/volunteer details). Obviously we welcome questions/input regardless of your involvement decision etc!  </p>
 <p>The SSD is essentially batched SQL script(s), that create labelled persistent data tables alongside your existing reporting tables(e.g. located where performance/Analyst teams might already pre-process or query reporting data). <strong>No data is shared or leaves your LA, and no changes to your existing systems are required</strong>. </p>
@@ -1127,64 +1178,63 @@ There is further ongoing work to provide further 'human readable' reporting meth
 <h2 id="ssd-development-details">SSD development details</h2>
 <h3 id="technical-and-low-level-ssd-detail">Technical and low-level SSD detail</h3>
 <p>The additional explanation detail that follows is relevant to those seeking a more in depth understanding of the granular SSD development detail. The majority of what follows on this page can be ignored/is less relevant to those looking only to set up their LA for SSD use. </p>
+<blockquote>
 <h3 id="data-objects-conceptual-model">Data objects Conceptual Model</h3>
-<p>Defining the scope of objects/data points capturing LA Childrens Services data during the different stages of an individual's progress through the CSC system(s). Published for iterative review.</p>
+<p><strong>This section currently in progress</strong> Defining the scope of objects/data points capturing LA Childrens Services data during the different stages of an individual's progress through the CSC system(s). Published for iterative review. </p>
 <ul>
 <li><a href="https://data-to-insight.github.io/ssd-data-model-next">TBC-data object/conceptual model</a></li>
 <li><a href="https://data-to-insight.github.io/ssd-data-model-next/">TBC-data object/item-guidance model</a></li>
 <li><a href="https://data-to-insight.github.io/ssd-data-model-next">TBC-existing data returns map</a></li>
 </ul>
+</blockquote>
 <h3 id="change-log">Change log</h3>
 <p>Agreed data item-level changes are assigned an identifier, and will be traceable within the <a href="CHANGELOG/">changelog.md</a>. A sub-set of the change details for the most recent change (if any) also appear within each objects metadata block within the YAML file(s). The current change log contains sample data until we deploy the first pilot release. Note: Object-level change tracking is not yet available/in progress; feedback/suggestions welcomed. </p>
-<pre><code class="language-yaml">- name: &lt;data object name&gt;
-  fields:
-  - [...]
-    metadata:
-      release_datetime: 
-      change_id: 
-      item_changes_count: 
-      change_reason: 
-      change_type: &lt;bug|new feature|change|...tbc&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;data object name&gt;</span>
+<span class="w">  </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">release_datetime</span><span class="p">:</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">change_id</span><span class="p">:</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">item_changes_count</span><span class="p">:</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">change_reason</span><span class="p">:</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">change_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;bug|new feature|change|...tbc&gt;</span>
+</code></pre></div>
 <h3 id="data-objects">Data objects</h3>
-<p>The data model is described using [YAML][yaml], which is designed to be a "human friendly" data format, offering a more readable structure than such as XML/JSON, a reduced storage/processing footprint and in combination with Git provides an audit trail of changes that can be tracked.</p>
+<p>The data model is described using <a href="https://yaml.org/">YAML</a>, which is designed to be a "human friendly" data format, offering a more readable structure than such as XML/JSON, a reduced storage/processing footprint and in combination with Git provides an audit trail of changes that can be tracked.</p>
 <p>The <a href="./docs/schema">objects</a> folder contains definition for the specification, data objects as well as details
 of synthetic data parameters and validation rules that apply to each field within the object. At the moment, the validation definitions do not reference back to the stat-returns validation process. </p>
 <p>An example data object contains a description and a set of fields for that record. The fields have an ID (the key), a name,
 type, description, which cms systems the data item/field is available on and any comments,</p>
-<pre><code class="language-yaml">
-- name: &lt;data object name&gt;
-  fields:
-  - name: &lt;item Name&gt;
-    type: &lt;string|int|categorical|list&gt;
-    description: 
-    item_ref: &lt;data item ref code&gt;
-    primary_key: &lt;true&gt;
-    validators:
-      &lt;validator&gt;:  
-    categories:
-    returns:
-    cms:
-    cms_field:
-    - liquid_logic:&lt;ll_field_name&gt;
-    - mosaic: &lt;mosaic_field_name&gt;
-    cms_table:
-    - liquid_logic:&lt;ll_tbl_name&gt;
-    - mosaic: &lt;mosaic_tbl_name&gt;
-    guidance: &lt;DfE of similar guidance txt&gt;
-    metadata:
-      release_datetime: 
-      change_id: 
-      item_changes_count: 
-      change_reason: 
-      change_type: &lt;bug|new feature|change|...tbc&gt;
-    [...]
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;data object name&gt;</span>
+<span class="w">  </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;item Name&gt;</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string|int|categorical|list&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">item_ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;data item ref code&gt;</span>
+<span class="w">    </span><span class="nt">primary_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;true&gt;</span>
+<span class="w">    </span><span class="nt">validators</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">&lt;validator&gt;</span><span class="p">:</span><span class="w">  </span>
+<span class="w">    </span><span class="nt">categories</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">returns</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">cms</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">cms_field</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">liquid_logic:&lt;ll_field_name&gt;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mosaic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;mosaic_field_name&gt;</span>
+<span class="w">    </span><span class="nt">cms_table</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">liquid_logic:&lt;ll_tbl_name&gt;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mosaic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;mosaic_tbl_name&gt;</span>
+<span class="w">    </span><span class="nt">guidance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;DfE of similar guidance txt&gt;</span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">release_datetime</span><span class="p">:</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">change_id</span><span class="p">:</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">item_changes_count</span><span class="p">:</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">change_reason</span><span class="p">:</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">change_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;bug|new feature|change|...tbc&gt;</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+</code></pre></div>
 <h3 id="output">Output</h3>
 <p>Since the specification is intended to be easy to maintain, and most case management and data management systems aren't YAML aware, the project is working towards providing an open source set of tools to perform the needed processing, incl. extract the required data items from current/known CMS systems and provide methods to allow the YAML object definitions to be easily updated from specification improvement updates or required revisions. Stakeholders and others are also invited to fork the repository and/or suggest changes to all elements of the project including definitions structure and code-base. </p>
-<p>Currently the YAML data objects, associated diagrams, documentation and website can be (re-)generated using the tools. The SQL[sql] tools are in development at the moment, but are aimed towards extracting the relevant data directly from different CMS systems in a CMS-agnostic approach; enabling the inclusion of both new data objects, new items in existing objects and revisions to both. SQL for each CMS type can be generated using the provided tools(Pilot includes only Liquid Logic and MOSAIC compatibility), and the resultant SQL scripts are output into an SQL folder. </p>
-<h3 id="current-phase"><a href="#current-phase">Current phase</a></h3>
-<p>The project is following a transparent and iterative development cycle, within the following deployment stages. Further stakeholder <a href="https://forms.office.com/e/UysrcGApJ1">feedback</a> and involvement is welcomed at any phase. LA's that wish to take part in the pilot deployment are further invited to <a href="mailto:datatoinsight.enquiries@gmail.com?subject=[GitHub]%Standard%Safeguarding%Dataset">get in touch</a>. </p>
+<p>Currently the YAML data objects, associated diagrams, documentation and website can be (re-)generated using the tools. The SQL<a href="https://en.wikipedia.org/wiki/SQL/">sql</a> tools are in development at the moment, but are aimed towards extracting the relevant data directly from different CMS systems in a CMS-agnostic approach; enabling the inclusion of both new data objects, new items in existing objects and revisions to both. SQL for each CMS type can be generated using the provided tools(Pilot includes only Liquid Logic and MOSAIC compatibility), and the resultant SQL scripts are output into an SQL folder. </p>
 <table>
 <thead>
 <tr>
@@ -1222,8 +1272,10 @@ type, description, which cms systems the data item/field is available on and any
 </tbody>
 </table>
 <h2 id="other-relevant-links">Other relevant links</h2>
-<p>[yaml] : https://yaml.org/</p>
-<p>[sql] : https://en.wikipedia.org/wiki/SQL/</p>
+<p>The SSD specification uses <a href="https://yaml.org/">YAML</a> as its core format, with tooling maintained in <a href="https://git-scm.com/">Git</a> and data extraction output in <a href="https://en.wikipedia.org/wiki/SQL/">SQL</a>.<br />
+Validation is aligned with <a href="https://json-schema.org/">JSON Schema</a> and <a href="https://digital-preservation.github.io/csv-schema/">CSV Schema</a> standards, and the site is built and published using <a href="https://www.mkdocs.org/">MkDocs</a> on <a href="https://pages.github.com/">GitHub Pages</a>.<br />
+The full specification is available on the <a href="https://github.com/data-to-insight/ssd-data-model-next/">SSD GitHub repository</a> (LA colleagues are welcome to request access).</p>
+<!-- linked refs -->
 
 
 
@@ -1278,5 +1330,7 @@ type, description, which cms systems the data item/field is available on and any
       <script src="assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -9,18 +9,22 @@
       
       
       
+        <link rel="prev" href="../deployment/mosaic/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+        <link rel="next" href="../CONTRIBUTORS/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>ADMIN ERD - SSD Data Model</title>
+        <title>SSD Connected - SSD Data Model</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
       
 
@@ -39,14 +43,23 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -58,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#admin-erd" class="md-skip">
+        <a href="#connected-and-future-development" class="md-skip">
           Skip to content
         </a>
       
@@ -74,7 +87,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="SSD Data Model" class="md-header__button md-logo" aria-label="SSD Data Model" data-md-component="logo">
+    <a href=".." title="SSD Data Model" class="md-header__button md-logo" aria-label="SSD Data Model" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -94,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ADMIN ERD
+              SSD Connected
             
           </span>
         </div>
@@ -172,7 +185,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="SSD Data Model" class="md-nav__button md-logo" aria-label="SSD Data Model" data-md-component="logo">
+    <a href=".." title="SSD Data Model" class="md-nav__button md-logo" aria-label="SSD Data Model" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -190,7 +203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -250,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_cla/" class="md-nav__link">
+      <a href="../schema/erd_cla/" class="md-nav__link">
         
   
   
@@ -273,7 +286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_cin/" class="md-nav__link">
+      <a href="../schema/erd_cin/" class="md-nav__link">
         
   
   
@@ -296,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_cp/" class="md-nav__link">
+      <a href="../schema/erd_cp/" class="md-nav__link">
         
   
   
@@ -319,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_identity/" class="md-nav__link">
+      <a href="../schema/erd_identity/" class="md-nav__link">
         
   
   
@@ -342,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_health/" class="md-nav__link">
+      <a href="../schema/erd_health/" class="md-nav__link">
         
   
   
@@ -365,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_ehcp/" class="md-nav__link">
+      <a href="../schema/erd_ehcp/" class="md-nav__link">
         
   
   
@@ -388,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_send/" class="md-nav__link">
+      <a href="../schema/erd_send/" class="md-nav__link">
         
   
   
@@ -411,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_early_help/" class="md-nav__link">
+      <a href="../schema/erd_early_help/" class="md-nav__link">
         
   
   
@@ -434,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_care_leavers/" class="md-nav__link">
+      <a href="../schema/erd_care_leavers/" class="md-nav__link">
         
   
   
@@ -457,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_finance/" class="md-nav__link">
+      <a href="../schema/erd_finance/" class="md-nav__link">
         
   
   
@@ -480,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_workforce/" class="md-nav__link">
+      <a href="../schema/erd_workforce/" class="md-nav__link">
         
   
   
@@ -503,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../erd_ssd_admin/" class="md-nav__link">
+      <a href="../schema/erd_ssd_admin/" class="md-nav__link">
         
   
   
@@ -571,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/olm/" class="md-nav__link">
+      <a href="../deployment/olm/" class="md-nav__link">
         
   
   
@@ -594,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/systemc/" class="md-nav__link">
+      <a href="../deployment/systemc/" class="md-nav__link">
         
   
   
@@ -617,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/azeus/" class="md-nav__link">
+      <a href="../deployment/azeus/" class="md-nav__link">
         
   
   
@@ -640,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/mosaic/" class="md-nav__link">
+      <a href="../deployment/mosaic/" class="md-nav__link">
         
   
   
@@ -663,6 +676,97 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SSD Connected
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSD Connected
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connected-and-future-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connected and Future Development
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -680,8 +784,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -690,9 +792,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-field-previews" class="md-nav__link">
+  <a href="#connected-and-future-development" class="md-nav__link">
     <span class="md-ellipsis">
-      Table Field Previews
+      Connected and Future Development
     </span>
   </a>
   
@@ -714,26 +816,38 @@
 
 
 
-<h1 id="admin-erd">ADMIN ERD</h1>
-<p><img alt="ADMIN ERD" src="../../assets/images/erd_admin.svg" /></p>
-<p><a href="../../assets/images/erd_admin.svg">View full image</a>  |  <a href="../../assets/images/erd_admin.svg">Download SVG</a>  |  <a href="../dot/erd_admin.dot">Download DOT file</a></p>
-<h2 id="table-field-previews">Table Field Previews</h2>
-<p><strong>Tables in domain:</strong> 1</p>
-<details>
-<summary><strong>ssd_version_log</strong></summary>
+  <h1>SSD Connected</h1>
 
-
-| Field | Type | Notes |
-|-------|------|-------|
-| version_number | nvarchar |  |
-| release_date | Datetime |  |
-| description | nvarchar |  |
-| is_current | Bit |  |
-| created_at | Datetime |  |
-| created_by | nvarchar |  |
-| impact_description | nvarchar |  |
-
-</details>
+<h2 id="connected-and-future-development">Connected and Future Development</h2>
+<blockquote>
+<p><strong>Note</strong>: This section is a work in progress.<br />
+The SSD as a new CSC standardised middleware offers the potential for numerous onward developments.  </p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Project / Tool</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 **beta</td>
+<td>pilot testing**</td>
+<td><strong>DfE CSC Private Dashboard</strong></td>
+<td>Secure dashboard for local authorities and DfE to visualise API-transmitted CSC data.</td>
+</tr>
+<tr>
+<td>🟠 <strong>On Hold</strong></td>
+<td><strong>ChAT 2</strong></td>
+<td>Tbc</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<!-- | 🟡 **Beta Testing** | *EE.g. Future Beta* | Placeholder  | — |   -->
 
 
 
@@ -782,11 +896,13 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
