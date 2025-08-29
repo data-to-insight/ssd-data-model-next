@@ -30,25 +30,28 @@ Scripts follow the naming pattern:
 | Filename                             | Description                                        |
 |-------------------------------------|----------------------------------------------------|
 | `schema.generate_dot.py`            | Generates DOT graph files from YML object schema   |
-| `schema.migrate_relationships.py`   | Migrates standalone `relationships.yml` into inline foreign_key refs |
-| `docs.generate_index.py`            | Creates markdown pages for ERD visualisation       |
-| `data.convert_csv_to_yml.py`        | Converts legacy CSV metadata into YAML format      |
-| `validators.run_schema_check.py`    | Validates YML objects against Pydantic models      |
+| `schema.migrate_relationships.py`   | Migrate standalone `relationships.yml` into inline foreign_key refs |
+| `docs.generate_index.py`            | Create markdown pages for ERD visualisation       |
+| `data.convert_csv_to_yml.py`        | Convert legacy CSV metadata into YAML format      |
+| `validators.run_schema_check.py`    | Validate YML objects against Pydantic models      |
 
 ---
 
 ## Notes
 
-- All scripts are assumed to be run from the root of the repo using:
+- All scripts assumed to run from repo root:
 
   ```bash
   PYTHONPATH=. python scripts/<script_name>.py
 
 
-## Script Locate
+## Dev notes
 
-Search scripts by type:
+Locate/search scripts by type:
 
  ```bash
 ls scripts/schema.*
 ls scripts/data.*
+
+Adding a new .yml/SSD object
+

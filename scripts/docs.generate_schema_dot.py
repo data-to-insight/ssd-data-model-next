@@ -4,7 +4,7 @@ from pathlib import Path
 import subprocess
 import yaml
 
-# --- CONFIGURATION ---
+# --- CONFIG ---
 SCHEMA_PATH = Path("schema")
 DOT_OUTPUT_DIR = Path("docs/dot")
 IMAGE_OUTPUT_DIR = Path("docs/assets/images")
@@ -66,7 +66,7 @@ def generate_dot_from_yml():
             )
             print(f"{fmt.upper()} generated at: {output_path}")
         except FileNotFoundError:
-            print("Graphviz 'dot' not found. Please install it to generate diagrams.")
+            print("Graphviz 'dot' not found- install it to generate needed diagrams")
         except subprocess.CalledProcessError as e:
             print(f"Error generating {fmt.upper()}: {e}")
 

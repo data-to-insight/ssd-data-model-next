@@ -112,7 +112,7 @@ def generate_dot_for_domain(domain, entities):
         subprocess.run(["dot", f"-T{OUTPUT_FORMAT}", str(dot_path), "-o", str(image_path)], check=True)
         print(f"Image generated: {image_path}")
     except FileNotFoundError:
-        print("'dot' command not found. Please install Graphviz.")
+        print("'dot' command not found. install Graphviz")
 
 def generate_all_domain_diagrams():
     grouped_entities = collect_entities_by_domain()

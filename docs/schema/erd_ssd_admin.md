@@ -6,7 +6,30 @@
 
 ## Table Field Previews
 
-**Tables in domain:** 1
+**Tables in domain:** 2
+
+<details>
+<summary><strong>ssd_api_data_staging</strong></summary>
+
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td>nvarchar</td><td></td></tr>
+<tr><td>person_id</td><td>nvarchar</td><td></td></tr>
+<tr><td>json_payload</td><td>nvarchar</td><td></td></tr>
+<tr><td>current_hash</td><td>BINARY</td><td></td></tr>
+<tr><td>previous_hash</td><td>BINARY</td><td></td></tr>
+<tr><td>submission_status</td><td>nvarchar</td><td></td></tr>
+<tr><td>submission_timestamp</td><td>datetime</td><td></td></tr>
+<tr><td>api_response</td><td>nvarchar</td><td></td></tr>
+<tr><td>row_state</td><td>nvarchar</td><td></td></tr>
+<tr><td>last_updated</td><td>datetime</td><td></td></tr>
+</tbody>
+</table>
+
+</details>
 
 <details>
 <summary><strong>ssd_version_log</strong></summary>
