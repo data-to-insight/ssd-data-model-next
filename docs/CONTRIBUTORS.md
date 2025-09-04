@@ -32,11 +32,11 @@ Special thanks to our wider circle of contributing LAs, especially those which e
 
 ## Partner Organisations  
 
-We are grateful to the following partner organisations for their key contributions:  
+We are grateful to the following partner organisations for their key contributions and project funding:  
 
+- **Department for Education**  (Funding as part of DDSF)
 - **Association of Directors of Children’s Services**  
 - **Coram Voice**  
-- **Department for Education**  
 - **University of Sussex**  
 
 ---
