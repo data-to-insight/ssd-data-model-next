@@ -57,12 +57,13 @@ In no particular order:
 | **Humaira Farhan** | Azeus development |
 | **Tony Bateman** | Azeus development |
 | **Sam Yeates** | Early SystemC/LL testing |
+
 ---
 
 ## Special Thanks  
 
-- **Knowsley County Council** — John for providing the project's first testing access, enabling rapid early *cross-LA development and testing* - this was our first key proving ground and milestone.  
-
+- **Knowsley County Council** — John for providing the project's first testing access, enabling rapid early *cross-LA development and testing* - this was our earliest proving ground and milestone.  
+- **Merton, Coventry and Redcar and Cleveland County Council data and infastructure teams** — for providing the project's first external data verification testing as part of the DfE's Daily Data Flows pilot and progressing the SSD's extract definitions - considerable effort and vital insights from individuals here towards needed improvements.  
 ---
 
 ## How to Contribute  
