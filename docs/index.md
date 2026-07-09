@@ -18,26 +18,28 @@ Source repository for the Standard CSC Dataset for Local Authorities (Project 1a
 
 >This is the **Phase 2** source repository for the Standard CSC Dataset. [The **Phase 1** repo and front-end](https://data-to-insight.github.io/ssd-data-model/) continues to be maintained and updated as a more comprehensive legacy view during the ongoing port to this revised and improved phase 2 rebuild. 
 
-A standardised dataset for Children's Social Care (CSC) in safeguarding authorities. Enabling increased scope for bespoke local analysis using sector-driven national level data _(Ref: Project Stage 1)_; combined with a suite of methods/tools that all local authorities can adopt at near-zero running cost to independently produce the standardised dataset _(Ref: Project Stage 2)_. Current variation in local data caputure and storage limits data collaboration between LAs to standard ‘core’ datasets – most notably the Children in Need (CIN) Census and SSDA903, for children in need and looked after children respectively – and Ofsted’s “Annex A” specification of child-level data. These datasets often lack the depth and granularity that some individual LAs incorporate in bespoke local analysis, including to understand quality of practice and improved outcomes for vunerable children. 
+A standardised dataset schema for Children's Social Care (CSC) in safeguarding authorities. Enabling increased scope for bespoke local analysis using sector-driven national level data _(Ref: Project Stage 1)_; combined with a suite of methods/tools that all local authorities can adopt at near-zero running cost to independently produce the standardised dataset _(Ref: Project Stage 2)_. Current variation in local data caputure and CMS defined structures limits data collaboration between LAs to standard ‘core’ datasets – most notably the Children in Need (CIN) Census and SSDA903 for children in need and looked after children respectively – and Ofsted’s 'Annex A' specification of child-level data. These datasets often lack the depth and granularity that LAs incorporate in bespoke local analysis, including towards understanding quality of practice and improved outcomes for vunerable children.  
+
 Current phase : [deployment](#current-phase). 
 
 ## Initial core of the SSD
 
-The dataset in-part aims to standardise existing local variation in how collected data is stored, thus enabling a significantly expanded collaborative set of data items and providing wider multi-regional/national level consistency, improved independent LA benchmarking and potential for identifying best practice outcomes journeys. A six-year historical data scope is proposed across the range of safeguarding activities performed by councils. Project oversight and governance via a dedicated steering group, DfE project team and volunteer LA's as part of an initial pilot and extended development group. 
+The schema in-part aims to standardise existing local variation in how collected data is stored; it forms a consistent middleware layer between different CMS types and collective inter-LA|external reporting. A significantly expanded collaborative set of data items is enabled, thus providing wider multi-regional/national level consistency, improved independent LA benchmarking and potential for identifying best practice outcome journeys. A (flexible)six-year historical data scope is proposed across the range of safeguarding activities performed by councils. Project oversight and governance via a dedicated steering group(Phase 1), DfE project team and volunteer LA's as part of an initial pilot and extended development group. 
 
 ## SSD Proposed Schema
 <!-- Ensure needed is installed via mkdocs.yml to enable lightbox view -->
 [![SSD ERD](assets/images/schema_diagram.svg){ width="900" }](assets/images/schema_diagram.svg){ .glightbox }
 
 
-## Running the SSD for/within your LA (Summarised getting started introduction)
+## Running the SSD for/within your LA (Summarised getting started introduction)  
 Any representative from your LA is welcome to get in touch directly with questions or requests for support to get started with, or run the SSD (see following subscribe/contact/volunteer details). Obviously we welcome questions/input regardless of your involvement decision etc!  
 
 The SSD is essentially batched SQL script(s), that create labelled persistent data tables alongside your existing reporting tables(e.g. located where performance/Analyst teams might already pre-process or query reporting data). **No data is shared or leaves your LA, and no changes to your existing systems are required**. 
 
-Data tables(with data copied from your existing raw CMS tables) and indexes for the SSD are created, and therefore in some cases will need support and/or agreement from either your IT or Intelligence team. The SQL script is always non-destructive, i.e. it does nothing to your existing data/tables/anything - the SSD process is simply a series of SELECT statements, pulling copied data into a new standardised field and table structure on your own system for access by only you/your LA.  
+Data tables(with data copied from your existing raw CMS tables) and indexes for the SSD are created, and therefore in some cases will need support and/or agreement from either your IT or Intelligence team. The SQL script is always non-destructive, i.e. it does nothing to your existing data/tables/anything - the SSD process is simply a series of SELECT statements(a persistent SSD schema additionally requires named CREATE & DROP permissions), pulling copied data into a the standardised field and table structure on your own system for access by only you/your LA.  
 
-### Getting started workflow: 
+### Getting started workflow:  
+
 The development and deployment of the SSD is functional only within, and as a result of direct involvement with Local Authorities. So we're not expectant of a one-size-fits-all approach, and will work with your team(s) to ensure confidence in, and successfull implementation of the SSD for your LA.  
 - Contact us with your interest --> Conversations to assist running(within LA) & any basic set up needed --> Access given to the SSD script by email or via Github --> LA runs SSD --> Support available if needed --> shared access given to any available further tools e.g. stat-returns scripts etc. --> Feedback and improvements change requests as needed.
 
@@ -45,9 +47,9 @@ The development and deployment of the SSD is functional only within, and as a re
 
 ## Specification components
 
-### Specification
+### Specification  
 
-The SSD specification has been developed through extensive sector research, consideration of existing DfE returns, concurrent DfE projects, 130hrs+ of direct user research with Local Authorities and stakeholders. Project specification development has been made transparent at the monthly DfE Show & Tells (as part of the DDSF S&T's March'23-Feb'24) concurrent with the aforementioned oversight and governance. 
+The SSD specification has been developed through extensive sector research, consideration of existing DfE returns, concurrent DfE projects, 130hrs+ of direct user research with Local Authorities and stakeholders. Project specification development has been made transparent at the monthly DfE Show & Tells (all funded via DfE DDSF S&T's March'23-Feb'24) concurrent with the aforementioned oversight and governance. 
 
 The project will use [GIT][git] to track and approve proposed changes to the safeguarding data standard.
 There is further ongoing work to provide further 'human readable' reporting methods beyond the aforementioned [data object conceptual model](https://data-to-insight.github.io/ssd-data-model-next/). We have published our [full data-landscape overview that resulted in the specification](https://www.datatoinsight.org/publications-1/standard-safeguarding-dataset---technical-workshops-synthesis-october-2023) and have DfE agreement to publish the [final SSD report/DDSF findings here](https://www.datatoinsight.org/publications-1/standard-safeguarding-dataset---final-report)
